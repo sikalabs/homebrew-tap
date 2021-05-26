@@ -5,24 +5,24 @@
 class Tergum < Formula
   desc "Ultimate backup tool"
   homepage "https://github.com/sikalabs/tergum"
-  version "0.7.1"
+  version "0.7.2"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sikalabs/tergum/releases/download/v0.7.1/tergum_v0.7.1_darwin_amd64.tar.gz"
-    sha256 "4f9a5f805910e8505fe6b154a59d7bf90f89a4e7b802b6c63e7dd56a7bb6441b"
+    url "https://github.com/sikalabs/tergum/releases/download/v0.7.2/tergum_v0.7.2_darwin_amd64.tar.gz"
+    sha256 "588139549ac4efac564e60c7244bbca03b8ed22686719c2d766d5d2448595a35"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sikalabs/tergum/releases/download/v0.7.1/tergum_v0.7.1_darwin_arm64.tar.gz"
-    sha256 "5daffdeef8f3f1b087cec5453caa8a93784bb128637ee99c9629cf7adb17dc74"
+    url "https://github.com/sikalabs/tergum/releases/download/v0.7.2/tergum_v0.7.2_darwin_arm64.tar.gz"
+    sha256 "e1ad793299f13ad940009f513a96ce14b0f1bb1983ac4e67fae1853e826d97d6"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sikalabs/tergum/releases/download/v0.7.1/tergum_v0.7.1_linux_amd64.tar.gz"
-    sha256 "850f0e81acb5abfd244170438321125a965a353036ee29391776200f71f79010"
+    url "https://github.com/sikalabs/tergum/releases/download/v0.7.2/tergum_v0.7.2_linux_amd64.tar.gz"
+    sha256 "aa10b8ec75d6af15db3c6caad31ea7063f514ebb9ea416d454c3548acd62ba76"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sikalabs/tergum/releases/download/v0.7.1/tergum_v0.7.1_linux_arm64.tar.gz"
-    sha256 "c72ed3670250f1e68906166780b3af0a39937caedcb52d3e15faf6519d63964c"
+    url "https://github.com/sikalabs/tergum/releases/download/v0.7.2/tergum_v0.7.2_linux_arm64.tar.gz"
+    sha256 "ac339e3846f057778b8cb08e89247ae7c01c9681b79f9cb49bb1902983755b88"
   end
 
   def install
