@@ -5,24 +5,24 @@
 class Slut < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slut"
-  version "0.5.0"
+  version "0.6.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sikalabs/slut/releases/download/v0.5.0/slut_v0.5.0_darwin_amd64.tar.gz"
-    sha256 "a36767640cd82ae04ded80553ddd7e16800c651d8ffde5a8fed10d888db0d089"
+    url "https://github.com/sikalabs/slut/releases/download/v0.6.0/slut_v0.6.0_darwin_amd64.tar.gz"
+    sha256 "cc494d7d3748f76b54904c37a89314dfcd0954752ada2890d8cf7aff287471bf"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sikalabs/slut/releases/download/v0.5.0/slut_v0.5.0_darwin_arm64.tar.gz"
-    sha256 "10b1896b86aa5641b1fcf1ccb01bf4a1fe6f25ed850ded102a01f4b28c213cdb"
+    url "https://github.com/sikalabs/slut/releases/download/v0.6.0/slut_v0.6.0_darwin_arm64.tar.gz"
+    sha256 "95b3e4ed0efe252f78e4d8465be019f0746d675bd6ad2d8453612d0cd3e7c7a9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sikalabs/slut/releases/download/v0.5.0/slut_v0.5.0_linux_amd64.tar.gz"
-    sha256 "652cff68fa1815b2ef9164ec311a0936ac4f377b7fee60515183a214ce1ccabb"
+    url "https://github.com/sikalabs/slut/releases/download/v0.6.0/slut_v0.6.0_linux_amd64.tar.gz"
+    sha256 "99479f843232895880d848893da8a77bec372c75e8113f7555367cb4bce3aa07"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sikalabs/slut/releases/download/v0.5.0/slut_v0.5.0_linux_arm64.tar.gz"
-    sha256 "ad7cb5c8992ff4877cefd685cf6f02975815a71b299ebfd435c7451c9608a875"
+    url "https://github.com/sikalabs/slut/releases/download/v0.6.0/slut_v0.6.0_linux_arm64.tar.gz"
+    sha256 "c8df358868e9ddb878f79ba5cac7cf475fb1863900cb63d2d45ef25e1f1735d5"
   end
 
   def install
