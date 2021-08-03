@@ -10,19 +10,19 @@ class Slut < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/sikalabs/slut/releases/download/v0.7.0/slut_v0.7.0_darwin_amd64.tar.gz"
-    sha256 "7f45bf09d23549e776b2ebb895d6641f33616e662301bf08457295d4a1547a9c"
+    sha256 "29ade79cc898d2bd4c4c720e6986343083e444bf9cd21fd10f90832255e033fe"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/sikalabs/slut/releases/download/v0.7.0/slut_v0.7.0_darwin_arm64.tar.gz"
-    sha256 "adbb76cdc1d86296e7076e1262fa6d07c096c9fed212db3e3bda5903ea1774aa"
+    sha256 "db4a6979bdde38e064e9044248298a281255699180a9ba6ee0d777f1a483afc2"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/sikalabs/slut/releases/download/v0.7.0/slut_v0.7.0_linux_amd64.tar.gz"
-    sha256 "dcff1c8b650beb39bdbb8860ac9dbf8ad442c92e20e4316e218cb2aab200402f"
+    sha256 "a5fc00e8d8e386d51709b31756355ed7aa7859753512c5bc4ed81e40d9b8736a"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/sikalabs/slut/releases/download/v0.7.0/slut_v0.7.0_linux_arm64.tar.gz"
-    sha256 "2c55527fb71a7adb6de340203ac2e738e447e8886e2debeea0cc8f6b47a35dfe"
+    sha256 "c86df1ed38a5900703167799beb75bffab5294649d34f85441dc0ee733036793"
   end
 
   def install
