@@ -5,24 +5,29 @@
 class SluEdge < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.10.0"
+  version "0.11.0-dev-1"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sikalabs/slu/releases/download/v0.10.0/slu_v0.10.0_darwin_amd64.tar.gz"
-    sha256 "fdfbe553521d6c054a6d54f0bf5eb065d8999ca4c0eb25f796537ed7d006d80e"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-1/slu_v0.11.0-dev-1_darwin_amd64.tar.gz"
+      sha256 "52f3d1a237d3ca655138ba84d067ff66af834401aa3c98e5bc7862d8be656612"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-1/slu_v0.11.0-dev-1_darwin_arm64.tar.gz"
+      sha256 "e350b55211825d4d8b6b9b21a31e7ca8fe21e1175489bebd06c9c6fd29653429"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/sikalabs/slu/releases/download/v0.10.0/slu_v0.10.0_darwin_arm64.tar.gz"
-    sha256 "da3d844064f22a0308944a48ea192712e31a4418f3dab858a90443f7b7660b3c"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sikalabs/slu/releases/download/v0.10.0/slu_v0.10.0_linux_amd64.tar.gz"
-    sha256 "6367b58168320a79dc4fea77dceaa2ec7b749fdbbfbbb81eae3b1835079d945a"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sikalabs/slu/releases/download/v0.10.0/slu_v0.10.0_linux_arm64.tar.gz"
-    sha256 "435cf797af0ac79ba1e91c0886185c6c941208fa63d0527ae05478fa1c3c4f04"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-1/slu_v0.11.0-dev-1_linux_amd64.tar.gz"
+      sha256 "186c82e7a627f2dc51963c9fead39ab4a38cf4c15e68c321214f6564cbeffa6f"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-1/slu_v0.11.0-dev-1_linux_arm64.tar.gz"
+      sha256 "238fef095f6bee13b8e5dbdc3b06315b90c284b2533988568dcf034f3b7ca9c7"
+    end
   end
 
   conflicts_with "slu"
