@@ -5,30 +5,32 @@
 class SluATedge < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.11.0-dev-2"
+  version "0.11.0-dev-3"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-2/slu_v0.11.0-dev-2_darwin_amd64.tar.gz"
-      sha256 "f5f26f1b4e9a419510b38ff798ca59318ec6079eecccf48f4f3e9d44afa118ce"
+      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-3/slu_v0.11.0-dev-3_darwin_amd64.tar.gz"
+      sha256 "3ec79ab1ee2f85f3c87f4b44b3d4477048066ead3d0f20e9048fdbfdac98a886"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-2/slu_v0.11.0-dev-2_darwin_arm64.tar.gz"
-      sha256 "8ddfcf74389b03e426d4a364c8fab841ee882db7f68dfb6168a2ba15f57abc34"
+      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-3/slu_v0.11.0-dev-3_darwin_arm64.tar.gz"
+      sha256 "1d6a6ad28084d98a69e8b9c20efdb2ac8c81706c1ee85518a5d3136347f9d2de"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-2/slu_v0.11.0-dev-2_linux_amd64.tar.gz"
-      sha256 "1113c1dee4d3b5bbdfdf1458d5c3dbc6eb30837840362ac99927fe5b8c3cc2ca"
+      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-3/slu_v0.11.0-dev-3_linux_amd64.tar.gz"
+      sha256 "dd9fb00a0673e3ff311bc55b99c404989e78b3ea3868d247347b417bdc67d10d"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-2/slu_v0.11.0-dev-2_linux_arm64.tar.gz"
-      sha256 "4df59656f0e44da1d4c15d0209414a6846ad05ad45e13dae55797955b035f5f1"
+      url "https://github.com/sikalabs/slu/releases/download/v0.11.0-dev-3/slu_v0.11.0-dev-3_linux_arm64.tar.gz"
+      sha256 "266a1d835e0547687377db8abf03c686d7bf1f161f6634ef0deb4e621150053b"
     end
   end
+
+  keg_only :versioned_formula
 
   def install
     bin.install "slu"
