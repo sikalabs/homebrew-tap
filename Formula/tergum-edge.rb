@@ -5,28 +5,28 @@
 class TergumEdge < Formula
   desc "Tergum Backup Tool"
   homepage "https://github.com/sikalabs/tergum"
-  version "0.9.0-dev-3"
+  version "0.10.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-3/tergum_v0.9.0-dev-3_darwin_amd64.tar.gz"
-      sha256 "6881feffc94ce46f6519a97b64389e24435323570b0f04f98d2f2ae4643c210b"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.10.0/tergum_v0.10.0_darwin_amd64.tar.gz"
+      sha256 "89be78ff46552bfe0191d359e6f35f2bd4dbf6415e939d04cee567aa12f64398"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-3/tergum_v0.9.0-dev-3_darwin_arm64.tar.gz"
-      sha256 "354b19fee156823c91d61b3b1a8951a8e1d6b35f70ff1d9e535bceda97278b65"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.10.0/tergum_v0.10.0_darwin_arm64.tar.gz"
+      sha256 "53166cfc0cae62549b49b8e00e80156c3eff709ffcf4b630ec02b13d7eaaeaec"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-3/tergum_v0.9.0-dev-3_linux_amd64.tar.gz"
-      sha256 "048e1da2dd6776cb21d1ce5cde425b0f4ae25be00369f6605f9bdd3ad7d7614c"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.10.0/tergum_v0.10.0_linux_amd64.tar.gz"
+      sha256 "b6fee13b5bd8feb032506e43812e9b08d7638e3870559e97592e329de306c618"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-3/tergum_v0.9.0-dev-3_linux_arm64.tar.gz"
-      sha256 "24acc93b59a07f6d2b66d88147b6d959458ea60a8d8ca21b251052f612f77791"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.10.0/tergum_v0.10.0_linux_arm64.tar.gz"
+      sha256 "594337712033d150c327f2a9d6d8b04eef9b4baeacb8712b8977e526e51bb150"
     end
   end
 
