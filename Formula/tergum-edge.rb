@@ -5,28 +5,28 @@
 class TergumEdge < Formula
   desc "Tergum Backup Tool"
   homepage "https://github.com/sikalabs/tergum"
-  version "0.9.0-dev-1"
+  version "0.9.0-dev-2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-1/tergum_v0.9.0-dev-1_darwin_amd64.tar.gz"
-      sha256 "37ccad089e8c364645c98ae67c4c4df53a832b5dc29405c77bdd47bdc10c4d22"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-2/tergum_v0.9.0-dev-2_darwin_amd64.tar.gz"
+      sha256 "a94d2d3edc67ed44c208bd891c7d0fefc71c75d91b5d297cca1fdab71449e4f6"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-1/tergum_v0.9.0-dev-1_darwin_arm64.tar.gz"
-      sha256 "9bb23b92139eccc336f4f3f3ab27301f2f68ea10b73a38e0ba450b89b640374c"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-2/tergum_v0.9.0-dev-2_darwin_arm64.tar.gz"
+      sha256 "a0ae15eb5b06ec78ce48330fbb2951c2f825aacf83024248f1ddf57fcf997463"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-1/tergum_v0.9.0-dev-1_linux_amd64.tar.gz"
-      sha256 "3e6a34b530c6bd4dcd6281a722c711ce327468fc7746581775d0306d1a9927ee"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-2/tergum_v0.9.0-dev-2_linux_amd64.tar.gz"
+      sha256 "f5ddcb77fa9258de568a5f54f99747e2e3a0fa0edbae01fad45eeeb424bc9020"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-1/tergum_v0.9.0-dev-1_linux_arm64.tar.gz"
-      sha256 "ab8b61f0721acbee00d127265c199dd1ab916cf514036fa5151fce0a3496c063"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.9.0-dev-2/tergum_v0.9.0-dev-2_linux_arm64.tar.gz"
+      sha256 "e7487ab1dcda5a5655bccdbe1dee577bd75f96f694276f6b566a46a394bde9df"
     end
   end
 
@@ -42,6 +42,6 @@ class TergumEdge < Formula
   end
 
   test do
-    system "#{bin}/tergum -v"
+    system "#{bin}/tergum version"
   end
 end
