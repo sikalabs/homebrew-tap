@@ -11,22 +11,22 @@ class Slu < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/sikalabs/slu/releases/download/v0.13.0/slu_v0.13.0_darwin_amd64.tar.gz"
-      sha256 "5ccc792342ad0852de0420e74c61bdc989977a5defd19a6ae91dd9a99631f6c6"
+      sha256 "d92051d54f7bb441a76324e577d3409175d2766f3bce4acecac728cfc346149d"
     end
     if Hardware::CPU.arm?
       url "https://github.com/sikalabs/slu/releases/download/v0.13.0/slu_v0.13.0_darwin_arm64.tar.gz"
-      sha256 "28f5ddb3bac40522d3089ea8d1b1ff5045433885e0bdae6e26837434ef84bafb"
+      sha256 "b385c8473eaedff285914df834f4be6944d00d5a83ce3309bbc288b3019e8a20"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/sikalabs/slu/releases/download/v0.13.0/slu_v0.13.0_linux_amd64.tar.gz"
-      sha256 "13ba0b3f424d7b93a1988ef8feba3f3107c4b53a051572be68a2ce2a3648e147"
+      sha256 "d4a31154a3fc8fdc32a296e1a7d40389825f412b12bdb983ff2a629b68432ef7"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sikalabs/slu/releases/download/v0.13.0/slu_v0.13.0_linux_arm64.tar.gz"
-      sha256 "e782e98b373bbef51ad73aab616a72c965b7c251156e3871459acd5004a95cd3"
+      sha256 "b3d47289873b141a9d7d7eb249d5b8a0debf8648cd6a44bba0fb6bafa9aea65b"
     end
   end
 
