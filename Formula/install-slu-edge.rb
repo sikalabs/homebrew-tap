@@ -11,22 +11,22 @@ class InstallSluEdge < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/sikalabs/install-slu/releases/download/v0.1.0/install-slu_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "b8f775a67b2a6a3a8e522770d9198d3ab3a58f265e9df41e459cc9068216ad20"
+      sha256 "f050817a259cfeafe291e67fe6461b3dab7c7e45ab79d6bb95e33aca8a641993"
     end
     if Hardware::CPU.arm?
       url "https://github.com/sikalabs/install-slu/releases/download/v0.1.0/install-slu_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "ab5b0856ee5f46a282a9ef799eaae4cfa0693c1b8cd48176526832c8bd8a33a8"
+      sha256 "5cf41ca708ab1d326d161195063d465a9122d84d27b0af202a9943f595ecc395"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/sikalabs/install-slu/releases/download/v0.1.0/install-slu_v0.1.0_linux_amd64.tar.gz"
-      sha256 "9b58735c414289519631b421f6a69f4e9ee6a473301abda0dd3fc00ed369449d"
+      sha256 "fabf9d07c5cea96331f1b618fbf3dc1cfb0483962e19e88254417f9b42057d27"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sikalabs/install-slu/releases/download/v0.1.0/install-slu_v0.1.0_linux_arm64.tar.gz"
-      sha256 "bcd6620fb4cb156c8bc7b531e2e8bc487fc0227a24e822237ff4bd2a3b81a3af"
+      sha256 "7f418d97a2457c21e2f4ecc91e05b9529d0019f02f51a5e0763fad1bd9f0003a"
     end
   end
 
