@@ -5,28 +5,28 @@
 class SluEdge < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.18.0-dev-2"
+  version "0.17.1"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.18.0-dev-2/slu_v0.18.0-dev-2_darwin_amd64.tar.gz"
-      sha256 "1895cd9ea36242ae1b92a54ae6da06d3da9d63a667f7105a006f84f76fd6a52b"
+      url "https://github.com/sikalabs/slu/releases/download/v0.17.1/slu_v0.17.1_darwin_amd64.tar.gz"
+      sha256 "9a23ae97c20aff6121c5813c4da93c6347de9c2d4eea632e5a26bbd08c4a43cd"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.18.0-dev-2/slu_v0.18.0-dev-2_darwin_arm64.tar.gz"
-      sha256 "e7a991a86cb23014ce0a1dc6bc5671ae764d9097d41aa52b3e4f20fa7b39bc82"
+      url "https://github.com/sikalabs/slu/releases/download/v0.17.1/slu_v0.17.1_darwin_arm64.tar.gz"
+      sha256 "3bfe2627fbe22e3a3309f73b6faaba3c73ef0366ead98ef69174ab2559a62852"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.18.0-dev-2/slu_v0.18.0-dev-2_linux_amd64.tar.gz"
-      sha256 "ae61ba38c7f77b65c757f3599836beb66a62a233c4c9a0d4cf695925dde67ca3"
+      url "https://github.com/sikalabs/slu/releases/download/v0.17.1/slu_v0.17.1_linux_amd64.tar.gz"
+      sha256 "5ecb25392dc515ad58d7397eb7e228f37c39854eee74e0da0670b369bf253742"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.18.0-dev-2/slu_v0.18.0-dev-2_linux_arm64.tar.gz"
-      sha256 "bddd18fe5a8b482a838534fd987cc56c302e8183b26473236093b970caa90e50"
+      url "https://github.com/sikalabs/slu/releases/download/v0.17.1/slu_v0.17.1_linux_arm64.tar.gz"
+      sha256 "d9d027e03975e6562450cc58f3831384db048b3792f4a65fe773b96a3b9785d5"
     end
   end
 
