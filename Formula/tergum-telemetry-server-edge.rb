@@ -5,28 +5,28 @@
 class TergumTelemetryServerEdge < Formula
   desc "tergum-telemetry-server"
   homepage "https://github.com/sikalabs/tergum-telemetry-server"
-  version "0.1.0-dev-1"
+  version "0.1.0-dev-2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum-telemetry-server/releases/download/v0.1.0-dev-1/tergum-telemetry-server_v0.1.0-dev-1_darwin_amd64.tar.gz"
-      sha256 "d7b8a8b6f5719d63567f59847af7f2639540fc54b09dabe608a44660ccf7725e"
+      url "https://github.com/sikalabs/tergum-telemetry-server/releases/download/v0.1.0-dev-2/tergum-telemetry-server_v0.1.0-dev-2_darwin_amd64.tar.gz"
+      sha256 "b7f483d3a7302ed770842abb10fbe6e653209ee1332ae1608bf6e3ec1ff9a186"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum-telemetry-server/releases/download/v0.1.0-dev-1/tergum-telemetry-server_v0.1.0-dev-1_darwin_arm64.tar.gz"
-      sha256 "c369ed3233a0bf494e576da07545c3a3a503db96133f95456508f1f4a0dfd674"
+      url "https://github.com/sikalabs/tergum-telemetry-server/releases/download/v0.1.0-dev-2/tergum-telemetry-server_v0.1.0-dev-2_darwin_arm64.tar.gz"
+      sha256 "9ba52f86ca04ad7a18b9a00377839ee04d69f7540333d309b436f70b578fea41"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum-telemetry-server/releases/download/v0.1.0-dev-1/tergum-telemetry-server_v0.1.0-dev-1_linux_amd64.tar.gz"
-      sha256 "1b4eacdf49046bd7d94b0a72dd3f45fb7dd089255a0327757ef4f8054ae1e5e6"
+      url "https://github.com/sikalabs/tergum-telemetry-server/releases/download/v0.1.0-dev-2/tergum-telemetry-server_v0.1.0-dev-2_linux_amd64.tar.gz"
+      sha256 "f9537323e367dfb62d75fb9c77d0e33c26a47196436cb5135d1bb8d59675a7b8"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum-telemetry-server/releases/download/v0.1.0-dev-1/tergum-telemetry-server_v0.1.0-dev-1_linux_arm64.tar.gz"
-      sha256 "d5c2ffc6df8143b429cdfe81a31976e6a93f4afae5c42449ba402b5d141c2e9e"
+      url "https://github.com/sikalabs/tergum-telemetry-server/releases/download/v0.1.0-dev-2/tergum-telemetry-server_v0.1.0-dev-2_linux_arm64.tar.gz"
+      sha256 "6f9e4328513bf7aecd436971835f984f3e71ac81df61fb0b78442f46b5a712b8"
     end
   end
 
