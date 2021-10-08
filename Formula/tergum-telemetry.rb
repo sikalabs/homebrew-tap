@@ -5,28 +5,28 @@
 class TergumTelemetry < Formula
   desc "tergum-telemetry"
   homepage "https://github.com/sikalabs/tergum-telemetry"
-  version "0.2.0"
+  version "0.3.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum-telemetry/releases/download/v0.2.0/tergum-telemetry_v0.2.0_darwin_amd64.tar.gz"
-      sha256 "aaf25702ec8d2ddd80a027ce7996e29137f1e47ee16abd4e0f0542f568ec5f5c"
+      url "https://github.com/sikalabs/tergum-telemetry/releases/download/v0.3.0/tergum-telemetry_v0.3.0_darwin_amd64.tar.gz"
+      sha256 "6864761d479238c1ae0669fdbb827da3ad9d8184baf35a2d581845859b58b855"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum-telemetry/releases/download/v0.2.0/tergum-telemetry_v0.2.0_darwin_arm64.tar.gz"
-      sha256 "0b6ec0133c097cf2254770f07bfa1d971fb92d1a23ee62d70d9f03b833dd3a5d"
+      url "https://github.com/sikalabs/tergum-telemetry/releases/download/v0.3.0/tergum-telemetry_v0.3.0_darwin_arm64.tar.gz"
+      sha256 "7ca3a8d8f95b7d65f51be2a04e9b3d89c13d615b1b13ed09791b5fbed67291d2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum-telemetry/releases/download/v0.2.0/tergum-telemetry_v0.2.0_linux_amd64.tar.gz"
-      sha256 "93a8a230b02f430bcf794bbedc884acf403cf903d2742f997365890a86e1cf13"
+      url "https://github.com/sikalabs/tergum-telemetry/releases/download/v0.3.0/tergum-telemetry_v0.3.0_linux_amd64.tar.gz"
+      sha256 "e017aff3d1e15fce0e18c605d10fc394d33b9d99e4774622a40c62268e01d86b"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum-telemetry/releases/download/v0.2.0/tergum-telemetry_v0.2.0_linux_arm64.tar.gz"
-      sha256 "b048d467ebb627262b80fac34d38eb8c299bdc7025e7a6767e58bf8a68a72769"
+      url "https://github.com/sikalabs/tergum-telemetry/releases/download/v0.3.0/tergum-telemetry_v0.3.0_linux_arm64.tar.gz"
+      sha256 "db96700aed5deaa2d670087d6888c8d099bc475c410d557b018e9e36ee354fda"
     end
   end
 
