@@ -5,36 +5,47 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.19.1"
-  bottle :unneeded
+  version "0.20.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.19.1/slu_v0.19.1_darwin_amd64.tar.gz"
-      sha256 "7b53af633c721e850763f2d6292acc5527e9b36069d4951ed7a0030e42463f5e"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.19.1/slu_v0.19.1_darwin_arm64.tar.gz"
-      sha256 "ccd2194669244c2b345b8967ff49bebbbeadeb2c100d28d9abd94a7bbe5b7842"
+      url "https://github.com/sikalabs/slu/releases/download/v0.20.0/slu_v0.20.0_darwin_arm64.tar.gz"
+      sha256 "ac2c76118b8d7714f6fdcfe0c79718f981282fa469e92ec269abd8048d51a37b"
+
+      def install
+        bin.install "slu"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/slu/releases/download/v0.20.0/slu_v0.20.0_darwin_amd64.tar.gz"
+      sha256 "908004dd69ca525627bf3cc8010b42bde86eb83c73761d5985210a14e0602c3f"
+
+      def install
+        bin.install "slu"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.19.1/slu_v0.19.1_linux_amd64.tar.gz"
-      sha256 "ecd904e6d63f43c40a9fedda02cb467f31b151ab27667a123945ee2d503054e7"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.19.1/slu_v0.19.1_linux_arm64.tar.gz"
-      sha256 "8552ffde14ebdbd6d6ffec6bfd9cee34b6288cf5a54de803503892e08366521a"
+      url "https://github.com/sikalabs/slu/releases/download/v0.20.0/slu_v0.20.0_linux_arm64.tar.gz"
+      sha256 "e45dff8bb266b7f4f05cd83f36e35efdbac06db7e8288a39e43e910c0cb2e9d0"
+
+      def install
+        bin.install "slu"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/slu/releases/download/v0.20.0/slu_v0.20.0_linux_amd64.tar.gz"
+      sha256 "3bf243c85f76ed104153d650a24ec4eb4136e760244919a66cc57ffc3c6f2dee"
+
+      def install
+        bin.install "slu"
+      end
     end
   end
 
   conflicts_with "slu-edge"
-
-  def install
-    bin.install "slu"
-  end
 
   def caveats; <<~EOS
     How to use this binary: https://github.com/sikalabs/slu
