@@ -5,36 +5,47 @@
 class Tergum < Formula
   desc "Tergum Backup Tool"
   homepage "https://github.com/sikalabs/tergum"
-  version "0.20.0"
-  bottle :unneeded
+  version "0.21.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.20.0/tergum_v0.20.0_darwin_amd64.tar.gz"
-      sha256 "ddcf45a2a845fde893cfa5c697dccd64ee6213df355da66231f094d3958df6ef"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.20.0/tergum_v0.20.0_darwin_arm64.tar.gz"
-      sha256 "c30a28a5792aac425d06a7e6e5d3871f6faaed7bf46149c06300ede1a5597aac"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.21.0/tergum_v0.21.0_darwin_arm64.tar.gz"
+      sha256 "c98ba3fc4e2ec81ff1bcd4de2bf42675c6891adf2e534b8e2d2f4396feacf5b7"
+
+      def install
+        bin.install "tergum"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/tergum/releases/download/v0.21.0/tergum_v0.21.0_darwin_amd64.tar.gz"
+      sha256 "87e5d7c1299939b96f2d89ded10680660acb23ba42703e73333c5fe854ee5b01"
+
+      def install
+        bin.install "tergum"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.20.0/tergum_v0.20.0_linux_amd64.tar.gz"
-      sha256 "e20dffad3b23b7f41a42d13456a80d0f9eeeb2e9ddbc11fa723e4a79f1ea5502"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.20.0/tergum_v0.20.0_linux_arm64.tar.gz"
-      sha256 "80f93e0d0c7724305272acc193589c4fc68534b3f7f8be27beb22c9b13aa9910"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.21.0/tergum_v0.21.0_linux_arm64.tar.gz"
+      sha256 "f3181c8c94b15088a54294855e470771fbae57bfd63a48893da63fdf716bbe6e"
+
+      def install
+        bin.install "tergum"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/tergum/releases/download/v0.21.0/tergum_v0.21.0_linux_amd64.tar.gz"
+      sha256 "328a4114621e4baf25c03e1baa80e0e23b34412a955191edf7c65df7f0da228f"
+
+      def install
+        bin.install "tergum"
+      end
     end
   end
 
   conflicts_with "tergum-edge"
-
-  def install
-    bin.install "tergum"
-  end
 
   def caveats; <<~EOS
     How to use this binary: https://github.com/sikalabs/tergum
