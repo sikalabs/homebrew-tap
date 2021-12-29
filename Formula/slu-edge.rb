@@ -5,20 +5,20 @@
 class SluEdge < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.26.0"
+  version "0.27.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.26.0/slu_v0.26.0_darwin_arm64.tar.gz"
-      sha256 "580d450ff8c401ddc95f9432bdd79a7c18680e75ec5a2a636dc1e8824ac22847"
+      url "https://github.com/sikalabs/slu/releases/download/v0.27.0/slu_v0.27.0_darwin_arm64.tar.gz"
+      sha256 "fb871fec49dbc4bf578fd617d752a44d9301fb57df57aabf84cbea30e28bc26f"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.26.0/slu_v0.26.0_darwin_amd64.tar.gz"
-      sha256 "fc17422296fedf446a6ba31eecac621846ad82d1f5594cfccb8dcf949316b28a"
+      url "https://github.com/sikalabs/slu/releases/download/v0.27.0/slu_v0.27.0_darwin_amd64.tar.gz"
+      sha256 "081904efe8e239fae23ddb470e707a6ddc433d77470b0678ec36bc8fb4bdd3fc"
 
       def install
         bin.install "slu"
@@ -28,16 +28,16 @@ class SluEdge < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.26.0/slu_v0.26.0_linux_arm64.tar.gz"
-      sha256 "d6a60fa6789219ab0d2178bf58162737f6e469e7782cb1072227d71d18d10350"
+      url "https://github.com/sikalabs/slu/releases/download/v0.27.0/slu_v0.27.0_linux_arm64.tar.gz"
+      sha256 "70ce26b17e9e46eebc4ca508da2c07165b8312f1be7a6a477f527cb6bef8436e"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.26.0/slu_v0.26.0_linux_amd64.tar.gz"
-      sha256 "5f753a4d83793d781fd312df7bf60fae470c00beaf766afa401cd7a94eddc37e"
+      url "https://github.com/sikalabs/slu/releases/download/v0.27.0/slu_v0.27.0_linux_amd64.tar.gz"
+      sha256 "41f91fe74df3b1a522d51f7424bdac15f37d6ddb27577d4890d562c6815e774a"
 
       def install
         bin.install "slu"
