@@ -5,20 +5,20 @@
 class SluEdge < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.29.0"
+  version "0.30.0-dev-1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.29.0/slu_v0.29.0_darwin_arm64.tar.gz"
-      sha256 "1c1e5fe19fad40a01db621b2885d32a7e7895ea7c40b0dca6cd2e3d216479f21"
+      url "https://github.com/sikalabs/slu/releases/download/v0.30.0-dev-1/slu_v0.30.0-dev-1_darwin_arm64.tar.gz"
+      sha256 "aa2a004975fc8f0c461f2f7aef0cd566c71bcee1432f23705cdbf25c1f579ff8"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.29.0/slu_v0.29.0_darwin_amd64.tar.gz"
-      sha256 "bcc57ff7afd24be903a3b0567d7478e112131a9644e2c28cdf50cb90db45a3d9"
+      url "https://github.com/sikalabs/slu/releases/download/v0.30.0-dev-1/slu_v0.30.0-dev-1_darwin_amd64.tar.gz"
+      sha256 "9a5778a457381255f1f78008078306f27d29315de28debaad8aca7fea596f27f"
 
       def install
         bin.install "slu"
@@ -27,17 +27,17 @@ class SluEdge < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.29.0/slu_v0.29.0_linux_arm64.tar.gz"
-      sha256 "af594546ae0a390588765007110d3c44fac78bdf1df6a451caa841c30ab6dbe5"
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/slu/releases/download/v0.30.0-dev-1/slu_v0.30.0-dev-1_linux_amd64.tar.gz"
+      sha256 "db5481f32bda058660f94556787e9ae08516e1153c7bb5a9920492455242c895"
 
       def install
         bin.install "slu"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.29.0/slu_v0.29.0_linux_amd64.tar.gz"
-      sha256 "13ee191f0802cc8e125ec74577003d9f2be4455e15e5755bc80bff089280bfc5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/slu/releases/download/v0.30.0-dev-1/slu_v0.30.0-dev-1_linux_arm64.tar.gz"
+      sha256 "d42fc0629cabdbdd9e0dd2e9cfc410fb36baa323dc3093cd52738243ae8b670d"
 
       def install
         bin.install "slu"
