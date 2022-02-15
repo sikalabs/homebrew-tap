@@ -8,17 +8,17 @@ class SluEdge < Formula
   version "0.33.0-dev-1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.33.0-dev-1/slu_v0.33.0-dev-1_darwin_arm64.tar.gz"
-      sha256 "1588761c95896b52839d18532434d681b92e0b4b87a221d2a3d9bb16ceeec8ef"
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/slu/releases/download/v0.33.0-dev-1/slu_v0.33.0-dev-1_darwin_amd64.tar.gz"
+      sha256 "ebfdeb72e6a245dc887de51ede4e27af3c86474ebc168a2d14d7d56ac44935aa"
 
       def install
         bin.install "slu"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.33.0-dev-1/slu_v0.33.0-dev-1_darwin_amd64.tar.gz"
-      sha256 "ebfdeb72e6a245dc887de51ede4e27af3c86474ebc168a2d14d7d56ac44935aa"
+    if Hardware::CPU.arm?
+      url "https://github.com/sikalabs/slu/releases/download/v0.33.0-dev-1/slu_v0.33.0-dev-1_darwin_arm64.tar.gz"
+      sha256 "1588761c95896b52839d18532434d681b92e0b4b87a221d2a3d9bb16ceeec8ef"
 
       def install
         bin.install "slu"
