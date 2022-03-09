@@ -5,20 +5,20 @@
 class SluEdge < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.34.0"
+  version "0.35.0-dev-1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.34.0/slu_v0.34.0_darwin_arm64.tar.gz"
-      sha256 "9b599cc837dd333cc33095ae1d5c7c68716687f05f2d098ba9e06c2e8b5be05f"
+      url "https://github.com/sikalabs/slu/releases/download/v0.35.0-dev-1/slu_v0.35.0-dev-1_darwin_arm64.tar.gz"
+      sha256 "450b1a4d4cb5ae547f25d31ce6c7f4ff9ae7ffd268c9a2c97f66277971b1d621"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.34.0/slu_v0.34.0_darwin_amd64.tar.gz"
-      sha256 "a44432d80c35ca22940a6534362a123c9da2a54f4e2792dd381e80b6086e2bf2"
+      url "https://github.com/sikalabs/slu/releases/download/v0.35.0-dev-1/slu_v0.35.0-dev-1_darwin_amd64.tar.gz"
+      sha256 "14ea06ec90cb358bea38f1f1de64df9120d7fdf38cca5582d06d8e1444c21fe6"
 
       def install
         bin.install "slu"
@@ -28,16 +28,16 @@ class SluEdge < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.34.0/slu_v0.34.0_linux_arm64.tar.gz"
-      sha256 "6bb84d2c74b88b2bc91f722d08eae7d60a61201968e9bd40eb5ccafe8c361372"
+      url "https://github.com/sikalabs/slu/releases/download/v0.35.0-dev-1/slu_v0.35.0-dev-1_linux_arm64.tar.gz"
+      sha256 "2266694073f2909b27081672ab58a346e3b0aa4944fc601dcc89b1e6f81c0b93"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.34.0/slu_v0.34.0_linux_amd64.tar.gz"
-      sha256 "d3f1045b4272495105ee3b878e6766043f4b52dbaedf107683ed0e21cb70182d"
+      url "https://github.com/sikalabs/slu/releases/download/v0.35.0-dev-1/slu_v0.35.0-dev-1_linux_amd64.tar.gz"
+      sha256 "23eb5cfa67dba80853344afefff79c93d5ded348f6e9c885614d18f98ca24f4b"
 
       def install
         bin.install "slu"
