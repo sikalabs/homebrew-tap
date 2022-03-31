@@ -6,7 +6,6 @@ class TergumTelemetry < Formula
   desc "tergum-telemetry"
   homepage "https://github.com/sikalabs/tergum-telemetry"
   version "0.4.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?

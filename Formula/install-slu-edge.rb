@@ -6,7 +6,6 @@ class InstallSluEdge < Formula
   desc "install-slu"
   homepage "https://github.com/sikalabs/install-slu"
   version "0.1.0"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
