@@ -5,20 +5,20 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.49.0"
+  version "0.50.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.49.0/slu_v0.49.0_darwin_arm64.tar.gz"
-      sha256 "98688a4a58437dbb0ca48d25da4a86ecf5bce2b02dda671e569c675191482101"
+      url "https://github.com/sikalabs/slu/releases/download/v0.50.0/slu_v0.50.0_darwin_arm64.tar.gz"
+      sha256 "0f3f96125d9ae41e7b239dedc5de29f2a4b48c949413346bb2ffa67cdd10029a"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.49.0/slu_v0.49.0_darwin_amd64.tar.gz"
-      sha256 "9b2c91ba879ffe902c5c14aab6a5179ff044e68ca6051335e4a930ee988057dc"
+      url "https://github.com/sikalabs/slu/releases/download/v0.50.0/slu_v0.50.0_darwin_amd64.tar.gz"
+      sha256 "ac817edfb97a6925c0cf5acfc60462515799b81de0dca531103f3ea90ed6c56e"
 
       def install
         bin.install "slu"
@@ -28,16 +28,16 @@ class Slu < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.49.0/slu_v0.49.0_linux_arm64.tar.gz"
-      sha256 "cca2b922a803c1780ec629160a64f4477876ce60255f53fb23de1491d938555b"
+      url "https://github.com/sikalabs/slu/releases/download/v0.50.0/slu_v0.50.0_linux_arm64.tar.gz"
+      sha256 "ca89e8cbff189afff9246a16063c34bfc02f00be931d061d0841efca2a79485e"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.49.0/slu_v0.49.0_linux_amd64.tar.gz"
-      sha256 "b4691d4407c6f21c2455080b23655c35fd623bd570d79006e8711b3d15b4d11f"
+      url "https://github.com/sikalabs/slu/releases/download/v0.50.0/slu_v0.50.0_linux_amd64.tar.gz"
+      sha256 "ea61a1145714547cb13876a132eb56f30f29113a16aae99afe48ddaf4ada1453"
 
       def install
         bin.install "slu"
@@ -45,9 +45,10 @@ class Slu < Formula
     end
   end
 
-  def caveats; <<~EOS
-    How to use this binary: https://github.com/sikalabs/slu
-  EOS
+  def caveats
+    <<~EOS
+      How to use this binary: https://github.com/sikalabs/slu
+    EOS
   end
 
   test do
