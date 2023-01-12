@@ -5,20 +5,20 @@
 class Tergum < Formula
   desc "Tergum Backup Tool"
   homepage "https://github.com/sikalabs/tergum"
-  version "0.31.1"
+  version "0.32.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.31.1/tergum_v0.31.1_darwin_arm64.tar.gz"
-      sha256 "55b2bcd71dd686e1c8bea806f87f8087a629a3e2a8d292d9984e6aba6c43d9b0"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.32.0/tergum_v0.32.0_darwin_arm64.tar.gz"
+      sha256 "c03f6ebfe85f15e609b446fc06e25bf7c2391c97bdb94ee0b08b8fd08bbcf937"
 
       def install
         bin.install "tergum"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.31.1/tergum_v0.31.1_darwin_amd64.tar.gz"
-      sha256 "9ca98d7202bfe79012b36bbdc903a08bd7e05181378fa9be4a556355781bfd90"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.32.0/tergum_v0.32.0_darwin_amd64.tar.gz"
+      sha256 "8a9570fad8e553401bd17b94512176dc898e52b159724bc6e3e51c20376f91f9"
 
       def install
         bin.install "tergum"
@@ -28,16 +28,16 @@ class Tergum < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.31.1/tergum_v0.31.1_linux_arm64.tar.gz"
-      sha256 "d98a037d2c1d745137e46da1864bc1fee8fa4ec1bc66a74cac1044084882443d"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.32.0/tergum_v0.32.0_linux_arm64.tar.gz"
+      sha256 "c02e0818c0ec4ec94fc103180acf95f20fbff72d038c8f4307b1c392cfbfea14"
 
       def install
         bin.install "tergum"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.31.1/tergum_v0.31.1_linux_amd64.tar.gz"
-      sha256 "561c63b32dcbc71a094a6e01cd0e69520e9751cbcc79d3ffb3f0f83c983d4c4e"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.32.0/tergum_v0.32.0_linux_amd64.tar.gz"
+      sha256 "a359659cbb2487e8c42e2ddeb3f48991e47d4c2ab716d618b3efcfe6a7792804"
 
       def install
         bin.install "tergum"
@@ -45,9 +45,10 @@ class Tergum < Formula
     end
   end
 
-  def caveats; <<~EOS
-    How to use this binary: https://github.com/sikalabs/tergum
-  EOS
+  def caveats
+    <<~EOS
+      How to use this binary: https://github.com/sikalabs/tergum
+    EOS
   end
 
   test do
