@@ -10,7 +10,7 @@ class Slu < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/sikalabs/slu/releases/download/v0.62.0/slu_v0.62.0_darwin_arm64.tar.gz"
-      sha256 "6c55e092444e64f331318fe20ed9f238c7ed26de6ae2a3986e0fd12f015fdd7b"
+      sha256 "8ae135284613d7349e7428d8d5957cad3f8de7117556e786fe155b2b97f78472"
 
       def install
         bin.install "slu"
@@ -18,7 +18,7 @@ class Slu < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/sikalabs/slu/releases/download/v0.62.0/slu_v0.62.0_darwin_amd64.tar.gz"
-      sha256 "d678c1650c076d57ac6844f7da614407f1d9d546f5247111d6860aa286a50ff0"
+      sha256 "58e02ab00933356a69660d861505f2006317591696e01f76d9a5f74b5373dd7c"
 
       def install
         bin.install "slu"
@@ -29,7 +29,7 @@ class Slu < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/sikalabs/slu/releases/download/v0.62.0/slu_v0.62.0_linux_arm64.tar.gz"
-      sha256 "0d40a4b52f98f1e9e2508086d4514073ddcda4dc3294bec3ffcb02ef30cb89b3"
+      sha256 "0543f498ddcc37370dfe6cb8c0243d86df811282692a6656cd9debf1ae021d74"
 
       def install
         bin.install "slu"
@@ -37,7 +37,7 @@ class Slu < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/sikalabs/slu/releases/download/v0.62.0/slu_v0.62.0_linux_amd64.tar.gz"
-      sha256 "64d6210d107a82eec46f7872358a689c8534079109897d4f0c7f461c0677ae96"
+      sha256 "3154c7f5b5300f639a8b6d18b03e38637ea2ed98cc3f8b48595f14d5258e898e"
 
       def install
         bin.install "slu"
