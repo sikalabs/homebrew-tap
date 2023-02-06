@@ -5,20 +5,20 @@
 class Signpost < Formula
   desc "signpost"
   homepage "https://github.com/sikalabs/signpost"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/signpost/releases/download/v0.1.0/signpost_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "c6cd3204a702b76c6ed7eb2da38d7ed5f9be85f598681c2db06fd572d1777311"
+      url "https://github.com/sikalabs/signpost/releases/download/v0.2.0/signpost_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "e40fcf22eb6b430ee2d39aa83c292e7dfb464041b30e8311caf4436c114b7553"
 
       def install
         bin.install "signpost"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/signpost/releases/download/v0.1.0/signpost_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "68830dade5aac417ac59ef22b29edf16447c4c8e425ccd70d931761b7b77c3f6"
+      url "https://github.com/sikalabs/signpost/releases/download/v0.2.0/signpost_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "206d0298110173386b26e1fb46d751c8d06c8bd5520792c840a7e3799201ecdd"
 
       def install
         bin.install "signpost"
@@ -28,16 +28,16 @@ class Signpost < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/signpost/releases/download/v0.1.0/signpost_v0.1.0_linux_arm64.tar.gz"
-      sha256 "97a4778286c30beec09786e1843974f30db71a57a50efdf28c50a4d7a8922299"
+      url "https://github.com/sikalabs/signpost/releases/download/v0.2.0/signpost_v0.2.0_linux_arm64.tar.gz"
+      sha256 "35bef0cb6841be9de9bb857d00a48f6d525863425b916b922a9602c07ee0e310"
 
       def install
         bin.install "signpost"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/signpost/releases/download/v0.1.0/signpost_v0.1.0_linux_amd64.tar.gz"
-      sha256 "c54e42b4113dc5a44eb424bbd7acda43c41e443d187af282e3e5e6e963e905ed"
+      url "https://github.com/sikalabs/signpost/releases/download/v0.2.0/signpost_v0.2.0_linux_amd64.tar.gz"
+      sha256 "c6ff413f03babf024d6f44d432b031a93c37f733737c3cc3190b05b3ce1cd831"
 
       def install
         bin.install "signpost"
