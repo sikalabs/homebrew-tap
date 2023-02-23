@@ -5,20 +5,20 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.62.0"
+  version "0.63.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.62.0/slu_v0.62.0_darwin_arm64.tar.gz"
-      sha256 "8ae135284613d7349e7428d8d5957cad3f8de7117556e786fe155b2b97f78472"
+      url "https://github.com/sikalabs/slu/releases/download/v0.63.0/slu_v0.63.0_darwin_arm64.tar.gz"
+      sha256 "2c4edef609efaa9836983c7c055e2fc049d466c53b7b77399a146fa400911fe2"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.62.0/slu_v0.62.0_darwin_amd64.tar.gz"
-      sha256 "58e02ab00933356a69660d861505f2006317591696e01f76d9a5f74b5373dd7c"
+      url "https://github.com/sikalabs/slu/releases/download/v0.63.0/slu_v0.63.0_darwin_amd64.tar.gz"
+      sha256 "79dc1830fe6eeb391f3ffe6e4f61e79c708966a0ac515fba42bbb2ce3d1a1feb"
 
       def install
         bin.install "slu"
@@ -28,16 +28,16 @@ class Slu < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.62.0/slu_v0.62.0_linux_arm64.tar.gz"
-      sha256 "0543f498ddcc37370dfe6cb8c0243d86df811282692a6656cd9debf1ae021d74"
+      url "https://github.com/sikalabs/slu/releases/download/v0.63.0/slu_v0.63.0_linux_arm64.tar.gz"
+      sha256 "548b986e54f64531f1d57c83d878633daf43bfb857759f58bc53eb910248c8f3"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.62.0/slu_v0.62.0_linux_amd64.tar.gz"
-      sha256 "3154c7f5b5300f639a8b6d18b03e38637ea2ed98cc3f8b48595f14d5258e898e"
+      url "https://github.com/sikalabs/slu/releases/download/v0.63.0/slu_v0.63.0_linux_amd64.tar.gz"
+      sha256 "4053ac6bbf98cbd2e7b3e24faaec230570c6d0efb709e5538e8511decbbdb6d3"
 
       def install
         bin.install "slu"
