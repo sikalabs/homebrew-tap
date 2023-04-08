@@ -5,20 +5,20 @@
 class Tergum < Formula
   desc "Tergum Backup Tool"
   homepage "https://github.com/sikalabs/tergum"
-  version "0.34.0"
+  version "0.35.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.34.0/tergum_v0.34.0_darwin_arm64.tar.gz"
-      sha256 "b314c5bbb05243a8e1a64b1bc1399c3532a14b8a5f4aafdf740609fc85d63a4e"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.35.0/tergum_v0.35.0_darwin_arm64.tar.gz"
+      sha256 "f24cfcd7da4468ba4329c13372388d7ccb94cc9ae76403c0ab1a9329886c7293"
 
       def install
         bin.install "tergum"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.34.0/tergum_v0.34.0_darwin_amd64.tar.gz"
-      sha256 "60d94945d6ba6cfee89229e1ca7ee5dc9118ac107583091726707a77688938f7"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.35.0/tergum_v0.35.0_darwin_amd64.tar.gz"
+      sha256 "6bb83cf0b864a7ac535f539b9a3c99025119e23b3af3e2713341ddaab1102b57"
 
       def install
         bin.install "tergum"
@@ -28,16 +28,16 @@ class Tergum < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.34.0/tergum_v0.34.0_linux_arm64.tar.gz"
-      sha256 "f8dc044c2f4bf2760123aa28c9c6da0beb86479062c3a4274cd0b4b54462d43f"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.35.0/tergum_v0.35.0_linux_arm64.tar.gz"
+      sha256 "96e26e342789238746a4466bf38480291520b668ea0babd3fd4553149b90081c"
 
       def install
         bin.install "tergum"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.34.0/tergum_v0.34.0_linux_amd64.tar.gz"
-      sha256 "ba880514ba52003e814005c8a8d022bdba287f07cad788dbecc310910c5ba1ba"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.35.0/tergum_v0.35.0_linux_amd64.tar.gz"
+      sha256 "c64ee939227f6c5ad60c53772eeab3388d546e86ced2f341e9766d1f590e5596"
 
       def install
         bin.install "tergum"
