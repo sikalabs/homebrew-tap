@@ -5,20 +5,20 @@
 class Nela < Formula
   desc "nela"
   homepage "https://github.com/ondrejsika/nela-cli"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/ondrejsika/nela-cli/releases/download/v0.1.0/nela_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "e81bc53886a4273e5be619c190294e41cf546a9c6ce602f63afe5f98860705f8"
+    if Hardware::CPU.intel?
+      url "https://github.com/ondrejsika/nela-cli/releases/download/v0.2.0/nela_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "5cca4129f48574f25ba5eb58ac6541a059df961962ba9fc380f74b350f249d05"
 
       def install
         bin.install "nela"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ondrejsika/nela-cli/releases/download/v0.1.0/nela_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "ddd45ab2d35d50f1baefc56448207d6b3d424cdb6b09546bf75d301db945816d"
+    if Hardware::CPU.arm?
+      url "https://github.com/ondrejsika/nela-cli/releases/download/v0.2.0/nela_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "4b78b4d7b6b488e68b63d34a4c8183cad1b22bf24fb0f0056dc1b85b126b66b1"
 
       def install
         bin.install "nela"
@@ -27,17 +27,17 @@ class Nela < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ondrejsika/nela-cli/releases/download/v0.1.0/nela_v0.1.0_linux_amd64.tar.gz"
-      sha256 "b0e1660cc24fa7c1767cc2329a1f91f95e650cc7094abc837189b543bc8747d9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ondrejsika/nela-cli/releases/download/v0.2.0/nela_v0.2.0_linux_arm64.tar.gz"
+      sha256 "f3c4a1c5b1506dd939573b9b59eed8ea530f459102e45f428e6f72e8a4f746c2"
 
       def install
         bin.install "nela"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ondrejsika/nela-cli/releases/download/v0.1.0/nela_v0.1.0_linux_arm64.tar.gz"
-      sha256 "b4073d65af5b21b27f6947c082ada02494a6e89e3adcb46bb063984cffae72ea"
+    if Hardware::CPU.intel?
+      url "https://github.com/ondrejsika/nela-cli/releases/download/v0.2.0/nela_v0.2.0_linux_amd64.tar.gz"
+      sha256 "0ec694f1115f18efbda8d98a92fdc8822212a09435feb3a5e980247aac8c8990"
 
       def install
         bin.install "nela"
