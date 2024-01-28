@@ -5,20 +5,20 @@
 class Gobble < Formula
   desc "gobble"
   homepage "https://github.com/sikalabs/gobble"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/gobble/releases/download/v0.6.0/gobble_v0.6.0_darwin_amd64.tar.gz"
-      sha256 "ef535738f12f650498a22cae7bab060d5177d9a5f27858e2d00ca331a346af54"
+    if Hardware::CPU.arm?
+      url "https://github.com/sikalabs/gobble/releases/download/v0.7.0/gobble_v0.7.0_darwin_arm64.tar.gz"
+      sha256 "41a3aec2fdacdc1830cf11e9c08641db3064156b2e57076c7a1e2d13a7e99774"
 
       def install
         bin.install "gobble"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/gobble/releases/download/v0.6.0/gobble_v0.6.0_darwin_arm64.tar.gz"
-      sha256 "e0f87e10fc2e8ba9112f23e09aefe5c47b2cd395e38a9b573e15719283863b97"
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/gobble/releases/download/v0.7.0/gobble_v0.7.0_darwin_amd64.tar.gz"
+      sha256 "37b37ae858c625b5c383c89654c57a70aeac31710f22e91cf9c0f590f14d21aa"
 
       def install
         bin.install "gobble"
@@ -28,16 +28,16 @@ class Gobble < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/gobble/releases/download/v0.6.0/gobble_v0.6.0_linux_arm64.tar.gz"
-      sha256 "75397b5c787e51cb77f37df62f51b9736907814232de89ff5d18999edc5d2f99"
+      url "https://github.com/sikalabs/gobble/releases/download/v0.7.0/gobble_v0.7.0_linux_arm64.tar.gz"
+      sha256 "3ae3ea4e0ee3c5acca1846427598277d12c15c04f5127210b0c5f1bd8631a6b1"
 
       def install
         bin.install "gobble"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/gobble/releases/download/v0.6.0/gobble_v0.6.0_linux_amd64.tar.gz"
-      sha256 "3c095b8bf7b5216f99bb60cec61a4560bc2cbf142d074919577b402290c3912d"
+      url "https://github.com/sikalabs/gobble/releases/download/v0.7.0/gobble_v0.7.0_linux_amd64.tar.gz"
+      sha256 "c1d6bc26ada2ba833d1f871f37136113d4f8a8764b5a2310bc1a7fd2f70d0cd3"
 
       def install
         bin.install "gobble"
