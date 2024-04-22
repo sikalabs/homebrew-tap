@@ -5,20 +5,20 @@
 class RedirectServer < Formula
   desc "redirect-server"
   homepage "https://github.com/sikalabs/redirect-server"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/redirect-server/releases/download/v0.2.0/redirect-server_v0.2.0_darwin_arm64.tar.gz"
-      sha256 "202fc0e2e890ec07f33153ca04f4511610d21a23b83f427de089529bd39103e3"
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/redirect-server/releases/download/v0.3.0/redirect-server_v0.3.0_darwin_amd64.tar.gz"
+      sha256 "eb0f06994bf349fb73b3c4f450f9f708640a2bc2c6b81ac1a5c99cdb31137ea6"
 
       def install
         bin.install "redirect-server"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/redirect-server/releases/download/v0.2.0/redirect-server_v0.2.0_darwin_amd64.tar.gz"
-      sha256 "00e1c87f4b38979d01409ab23b23ea6bbd101d6a292b7d06ee0e797f55ed90ab"
+    if Hardware::CPU.arm?
+      url "https://github.com/sikalabs/redirect-server/releases/download/v0.3.0/redirect-server_v0.3.0_darwin_arm64.tar.gz"
+      sha256 "5dd62acc8b4d30a616783d0e91ac65de01b1a269eeb07bf6506ea831e07dd848"
 
       def install
         bin.install "redirect-server"
@@ -28,16 +28,16 @@ class RedirectServer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/redirect-server/releases/download/v0.2.0/redirect-server_v0.2.0_linux_arm64.tar.gz"
-      sha256 "8464eb5aec1a3c4316c78a2c8774d0fa0abb7629ce496cad4bce5e013ed904cb"
+      url "https://github.com/sikalabs/redirect-server/releases/download/v0.3.0/redirect-server_v0.3.0_linux_arm64.tar.gz"
+      sha256 "15773281258ed6a2adcac5ff42e754977256bef1e8ce05e99642a6138b2e1b28"
 
       def install
         bin.install "redirect-server"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/redirect-server/releases/download/v0.2.0/redirect-server_v0.2.0_linux_amd64.tar.gz"
-      sha256 "c75ef110983cbcb620541f15765840328aec63f2bc0a6ed7808f52392cae3142"
+      url "https://github.com/sikalabs/redirect-server/releases/download/v0.3.0/redirect-server_v0.3.0_linux_amd64.tar.gz"
+      sha256 "c4d33e8b8306e3637b03d93753d7a37d032d445e7306a956ea0f00657ada19df"
 
       def install
         bin.install "redirect-server"
