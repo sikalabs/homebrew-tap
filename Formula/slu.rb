@@ -5,20 +5,20 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.76.0"
+  version "0.77.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.76.0/slu_v0.76.0_darwin_arm64.tar.gz"
-      sha256 "6d9f37959c7c02e55c8af0b117e004bd41c4532fd23bbd37941655f4559af591"
+    on_intel do
+      url "https://github.com/sikalabs/slu/releases/download/v0.77.0/slu_v0.77.0_darwin_amd64.tar.gz"
+      sha256 "a4feef5a916dcb3ef35775f041ecd265d4214426a350feb746bdb8be356cdc5c"
 
       def install
         bin.install "slu"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.76.0/slu_v0.76.0_darwin_amd64.tar.gz"
-      sha256 "2a4681e9f8975c7dc54c8f2b743a9093c1099a5c3d00c4f55bbaf2e43876f7dd"
+    on_arm do
+      url "https://github.com/sikalabs/slu/releases/download/v0.77.0/slu_v0.77.0_darwin_arm64.tar.gz"
+      sha256 "bcfd94cc46ee4cbccb31c2fdf979fc99c4c6f80a7867d0060dd74c0ec152fb5c"
 
       def install
         bin.install "slu"
@@ -27,20 +27,24 @@ class Slu < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.76.0/slu_v0.76.0_linux_arm64.tar.gz"
-      sha256 "2204a3c8fdcdef119fc63b2f388afa0117651c3e7eef6ce98f24215fe6e48a86"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/sikalabs/slu/releases/download/v0.77.0/slu_v0.77.0_linux_amd64.tar.gz"
+        sha256 "c1d15492708fce53ca04d82524df610ebebfdf4c539d105933a4cdea6852579c"
 
-      def install
-        bin.install "slu"
+        def install
+          bin.install "slu"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.76.0/slu_v0.76.0_linux_amd64.tar.gz"
-      sha256 "ac4c45a91b45720a256ba3e20bc9b7a54b19623f27dd1095b326026033b31e6f"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/sikalabs/slu/releases/download/v0.77.0/slu_v0.77.0_linux_arm64.tar.gz"
+        sha256 "9eff81258b8df34ed0d47ce69e139ea26339db2d3b918d92ea17ad15f1203429"
 
-      def install
-        bin.install "slu"
+        def install
+          bin.install "slu"
+        end
       end
     end
   end
