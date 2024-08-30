@@ -10,7 +10,7 @@ class Slr < Formula
   on_macos do
     on_intel do
       url "https://github.com/sikalabs/slr/releases/download/v0.5.0/slr_v0.5.0_darwin_amd64.tar.gz"
-      sha256 "10198f87575b3123f61a33d216bdbe7b7dbb00c39025f1e8f157f422f234469f"
+      sha256 "649edc504dca6c7bac68a4e266bb34a9d70f80fa1919536bf2775c79f7b6d749"
 
       def install
         bin.install "slr"
@@ -18,7 +18,7 @@ class Slr < Formula
     end
     on_arm do
       url "https://github.com/sikalabs/slr/releases/download/v0.5.0/slr_v0.5.0_darwin_arm64.tar.gz"
-      sha256 "ae54411f9c363e479bd718b3d8db961f1cb5a4afcca3eb893ac6d1e54b283792"
+      sha256 "4e43f8891018d79d9c794075f916303eb82bd50db0e383ffc6931affb18256bc"
 
       def install
         bin.install "slr"
@@ -30,7 +30,7 @@ class Slr < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/sikalabs/slr/releases/download/v0.5.0/slr_v0.5.0_linux_amd64.tar.gz"
-        sha256 "349b99a5fb8c6fcd219525a4031abf19031be4578b599ec0caf67e500c1efd33"
+        sha256 "3cfcc788112babc8351da76f696670289c4edc0669eb18cb79fba17ae4769db7"
 
         def install
           bin.install "slr"
@@ -40,7 +40,7 @@ class Slr < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://github.com/sikalabs/slr/releases/download/v0.5.0/slr_v0.5.0_linux_arm64.tar.gz"
-        sha256 "8a882e73cc211127a3f7eb1a5c6e1eede23e2ddd8c603fe784bfbaabba829377"
+        sha256 "d3b435f5fbd4cfc464e9abd232d5af780671779d1ea936cbeff1e6291630e735"
 
         def install
           bin.install "slr"
