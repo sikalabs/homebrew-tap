@@ -5,20 +5,20 @@
 class Tergum < Formula
   desc "Tergum Backup Tool"
   homepage "https://github.com/sikalabs/tergum"
-  version "0.35.0"
+  version "0.36.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.35.0/tergum_v0.35.0_darwin_arm64.tar.gz"
-      sha256 "f24cfcd7da4468ba4329c13372388d7ccb94cc9ae76403c0ab1a9329886c7293"
+    on_intel do
+      url "https://github.com/sikalabs/tergum/releases/download/v0.36.0/tergum_v0.36.0_darwin_amd64.tar.gz"
+      sha256 "e348f7cc96b3421d16c3271254aecdf5429d0c6dd2e7c57aa093b5fda2a3c299"
 
       def install
         bin.install "tergum"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.35.0/tergum_v0.35.0_darwin_amd64.tar.gz"
-      sha256 "6bb83cf0b864a7ac535f539b9a3c99025119e23b3af3e2713341ddaab1102b57"
+    on_arm do
+      url "https://github.com/sikalabs/tergum/releases/download/v0.36.0/tergum_v0.36.0_darwin_arm64.tar.gz"
+      sha256 "136ffe7b732c0b1e039826c25a009bbf86ab2328fdf0a9e8d35fe1fef3f99c95"
 
       def install
         bin.install "tergum"
@@ -27,20 +27,24 @@ class Tergum < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.35.0/tergum_v0.35.0_linux_arm64.tar.gz"
-      sha256 "96e26e342789238746a4466bf38480291520b668ea0babd3fd4553149b90081c"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/sikalabs/tergum/releases/download/v0.36.0/tergum_v0.36.0_linux_amd64.tar.gz"
+        sha256 "00a7a0b6fefd4ae0d89aae5809b08e41b588bc79a34e0f738253a004a392d669"
 
-      def install
-        bin.install "tergum"
+        def install
+          bin.install "tergum"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.35.0/tergum_v0.35.0_linux_amd64.tar.gz"
-      sha256 "c64ee939227f6c5ad60c53772eeab3388d546e86ced2f341e9766d1f590e5596"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/sikalabs/tergum/releases/download/v0.36.0/tergum_v0.36.0_linux_arm64.tar.gz"
+        sha256 "5e0494100bfb61f192087e97da76f24f60ad87441561c651d7e771d10a7fae40"
 
-      def install
-        bin.install "tergum"
+        def install
+          bin.install "tergum"
+        end
       end
     end
   end
