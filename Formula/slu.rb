@@ -5,20 +5,20 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.81.0"
+  version "0.82.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/sikalabs/slu/releases/download/v0.81.0/slu_v0.81.0_darwin_amd64.tar.gz"
-      sha256 "2a3610b486a01f475ded38293e5f2d989750cbc4bcc8b9360391c7bd814ce1bc"
+      url "https://github.com/sikalabs/slu/releases/download/v0.82.0/slu_v0.82.0_darwin_amd64.tar.gz"
+      sha256 "ebb5270c302f046cb8fd1a3f5b6e479f60a29ac2baff38b345835711e4d8b11c"
 
       def install
         bin.install "slu"
       end
     end
     on_arm do
-      url "https://github.com/sikalabs/slu/releases/download/v0.81.0/slu_v0.81.0_darwin_arm64.tar.gz"
-      sha256 "e9b571b96f6f43a41501d39710a8b1d7402db872c37463c8d2b48b8ded6d0822"
+      url "https://github.com/sikalabs/slu/releases/download/v0.82.0/slu_v0.82.0_darwin_arm64.tar.gz"
+      sha256 "7348c5eb5e3fc968f95fdfc5aadd0b68206838d07cf8f2e2ef42a5667d06f257"
 
       def install
         bin.install "slu"
@@ -29,8 +29,8 @@ class Slu < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sikalabs/slu/releases/download/v0.81.0/slu_v0.81.0_linux_amd64.tar.gz"
-        sha256 "4fd397b0a0cbdb1eea08392e12565f0439ee123e4704b79b8718b48968c08ea8"
+        url "https://github.com/sikalabs/slu/releases/download/v0.82.0/slu_v0.82.0_linux_amd64.tar.gz"
+        sha256 "4634d1f252e93ae467886fdced484e9ebdbdc4dda03993130da1ff35360ffc7f"
 
         def install
           bin.install "slu"
@@ -39,8 +39,8 @@ class Slu < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sikalabs/slu/releases/download/v0.81.0/slu_v0.81.0_linux_arm64.tar.gz"
-        sha256 "cda28e6e9eccda9868ded8b4348899e565000e7cbaa50fe55bcbe1e02aea642b"
+        url "https://github.com/sikalabs/slu/releases/download/v0.82.0/slu_v0.82.0_linux_arm64.tar.gz"
+        sha256 "c8b4b8a80f8c934e10f2a40dd323c6cc940fb383bc5f25b63900af9d8755cef3"
 
         def install
           bin.install "slu"
