@@ -5,20 +5,20 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.82.1"
+  version "0.83.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/sikalabs/slu/releases/download/v0.82.1/slu_v0.82.1_darwin_amd64.tar.gz"
-      sha256 "9c1a098534a855e10b01ee5e7c865cfda27603dd82edb0f958229603160a826b"
+      url "https://github.com/sikalabs/slu/releases/download/v0.83.0/slu_v0.83.0_darwin_amd64.tar.gz"
+      sha256 "5f1d210ad1383b0bc28b1ddf52e78b4a8c47ecbd7c3bdfa543f5ccbb9219ecbe"
 
       def install
         bin.install "slu"
       end
     end
     on_arm do
-      url "https://github.com/sikalabs/slu/releases/download/v0.82.1/slu_v0.82.1_darwin_arm64.tar.gz"
-      sha256 "f278a78bce2385529294cbedf9c6fae949fa341b9844904ebfe5a987e68f116b"
+      url "https://github.com/sikalabs/slu/releases/download/v0.83.0/slu_v0.83.0_darwin_arm64.tar.gz"
+      sha256 "3c03f052d958283e24a945cf4c0623daa7134e43b987f11ae1a238b287bbbab9"
 
       def install
         bin.install "slu"
@@ -29,8 +29,8 @@ class Slu < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sikalabs/slu/releases/download/v0.82.1/slu_v0.82.1_linux_amd64.tar.gz"
-        sha256 "bd9bf2148fd74a84f54a102712f4c5c1c5fd15c3d7ddfe4975a3e83a89b4bb64"
+        url "https://github.com/sikalabs/slu/releases/download/v0.83.0/slu_v0.83.0_linux_amd64.tar.gz"
+        sha256 "2c2a0d95c5a9ee9123fd178558c3d03f83d8d473bf00608c56c4ebc65986bcef"
 
         def install
           bin.install "slu"
@@ -39,8 +39,8 @@ class Slu < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/sikalabs/slu/releases/download/v0.82.1/slu_v0.82.1_linux_arm64.tar.gz"
-        sha256 "1bc06f04abb7081d36bb036bcb157cc10495be5d0d592903f743d71cc079b885"
+        url "https://github.com/sikalabs/slu/releases/download/v0.83.0/slu_v0.83.0_linux_arm64.tar.gz"
+        sha256 "41117b0bdf9a5391ca7521f19d84ea7004e06efa0d624c47a98f3a06f817fa36"
 
         def install
           bin.install "slu"
