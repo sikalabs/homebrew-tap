@@ -5,20 +5,20 @@
 class Slr < Formula
   desc "slr"
   homepage "https://github.com/sikalabs/slr"
-  version "0.16.0"
+  version "0.17.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/sikalabs/slr/releases/download/v0.16.0/slr_v0.16.0_darwin_amd64.tar.gz"
-      sha256 "f9bc2a07d5f060e56f2233672d7cb3e1556203a63e45f72783676398e3fd017a"
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/slr/releases/download/v0.17.0/slr_v0.17.0_darwin_amd64.tar.gz"
+      sha256 "91c7020e010f5c52986d9bfaa09702c60b1b4b75e14a7ccd7ea4ee5c34d7b39b"
 
       def install
         bin.install "slr"
       end
     end
-    on_arm do
-      url "https://github.com/sikalabs/slr/releases/download/v0.16.0/slr_v0.16.0_darwin_arm64.tar.gz"
-      sha256 "2e0dc45b80a92f13044b992c8a57e65855a644bcec6933ac236ceb761412a7f7"
+    if Hardware::CPU.arm?
+      url "https://github.com/sikalabs/slr/releases/download/v0.17.0/slr_v0.17.0_darwin_arm64.tar.gz"
+      sha256 "18fa875ac466b2b6959f3dfb64b11363227b9c4862d92be89aa0bd20fb3b81e4"
 
       def install
         bin.install "slr"
@@ -27,24 +27,18 @@ class Slr < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sikalabs/slr/releases/download/v0.16.0/slr_v0.16.0_linux_amd64.tar.gz"
-        sha256 "5738c585398e999dac8933439a21fea6401adce3f49fe927f432352b11ff244b"
-
-        def install
-          bin.install "slr"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/slr/releases/download/v0.17.0/slr_v0.17.0_linux_amd64.tar.gz"
+      sha256 "eda63ac7c266a191666d8db2b36c25fe1c256e90e91e86d011aa25850226083f"
+      def install
+        bin.install "slr"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sikalabs/slr/releases/download/v0.16.0/slr_v0.16.0_linux_arm64.tar.gz"
-        sha256 "4b2806706880b7ec2f9b2d4f452e3c3103a7f350b31b1b3a6480903e07a289e3"
-
-        def install
-          bin.install "slr"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/slr/releases/download/v0.17.0/slr_v0.17.0_linux_arm64.tar.gz"
+      sha256 "20b4af4815900e6c1004cc799d0f14d777fdb6e0e8f5b10b04dc4a3a4a214c74"
+      def install
+        bin.install "slr"
       end
     end
   end
