@@ -5,20 +5,20 @@
 class Slr < Formula
   desc "slr"
   homepage "https://github.com/sikalabs/slr"
-  version "0.18.0"
+  version "0.19.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slr/releases/download/v0.18.0/slr_v0.18.0_darwin_amd64.tar.gz"
-      sha256 "55ee6747516eaded0b2157c3e71cf316b50866b4f88822a0fba70f2a3b466522"
+      url "https://github.com/sikalabs/slr/releases/download/v0.19.0/slr_v0.19.0_darwin_amd64.tar.gz"
+      sha256 "9afc07df8d6bb2b0fd86f3d07c50e3ccb8c24d51d9611fe05aadfc70d0afedd2"
 
       def install
         bin.install "slr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slr/releases/download/v0.18.0/slr_v0.18.0_darwin_arm64.tar.gz"
-      sha256 "c9a2e82a3d562000054aa57e216b894c2b7d6477fcd61c9fdf442d99a56a0fbb"
+      url "https://github.com/sikalabs/slr/releases/download/v0.19.0/slr_v0.19.0_darwin_arm64.tar.gz"
+      sha256 "1d2e88665a67100e88199722674f46d25ed7ebe30488c5c75974d5b13cda4216"
 
       def install
         bin.install "slr"
@@ -28,15 +28,15 @@ class Slr < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slr/releases/download/v0.18.0/slr_v0.18.0_linux_amd64.tar.gz"
-      sha256 "8eb70a414b0ce7fc08b23be37864fd9b84bbcee345a13f62922e0883b982f940"
+      url "https://github.com/sikalabs/slr/releases/download/v0.19.0/slr_v0.19.0_linux_amd64.tar.gz"
+      sha256 "a5be022f391d5bb0a7808353730e61333b2c4125048f3f1ef02b02fef9adf748"
       def install
         bin.install "slr"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slr/releases/download/v0.18.0/slr_v0.18.0_linux_arm64.tar.gz"
-      sha256 "05e6be09b17c0be4dd04ba0c6f76b3489256707212bafcf9a5caba27a24d9a3c"
+      url "https://github.com/sikalabs/slr/releases/download/v0.19.0/slr_v0.19.0_linux_arm64.tar.gz"
+      sha256 "cf5563e2261dbe972dc9bad676d65fbf04ddebbc4aeff24d934b2e598b5794e7"
       def install
         bin.install "slr"
       end
