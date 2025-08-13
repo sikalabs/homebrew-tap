@@ -5,20 +5,20 @@
 class Signpost < Formula
   desc "signpost"
   homepage "https://github.com/sikalabs/signpost"
-  version "0.6.0"
+  version "0.7.0"
 
   on_macos do
-    on_intel do
-      url "https://github.com/sikalabs/signpost/releases/download/v0.6.0/signpost_v0.6.0_darwin_amd64.tar.gz"
-      sha256 "ca74b2d7688e53788f335f6a300e69eb1cdfff672eef81f081dea3853fb4ca9c"
+    if Hardware::CPU.intel?
+      url "https://github.com/sikalabs/signpost/releases/download/v0.7.0/signpost_v0.7.0_darwin_amd64.tar.gz"
+      sha256 "d2977abffdafdbf2435eeccb5e8aea3488454dcc9ea0050bb1f2ad0b3468a9a3"
 
       def install
         bin.install "signpost"
       end
     end
-    on_arm do
-      url "https://github.com/sikalabs/signpost/releases/download/v0.6.0/signpost_v0.6.0_darwin_arm64.tar.gz"
-      sha256 "2f5b2cb9bcfce14af3c926b5f6da8858863bf83ef407d5fc8d9d499d8a31269b"
+    if Hardware::CPU.arm?
+      url "https://github.com/sikalabs/signpost/releases/download/v0.7.0/signpost_v0.7.0_darwin_arm64.tar.gz"
+      sha256 "5fbb6f4749a45e3d8e39e99ac4caa1659b8e3c49eed2114036601c6a7f3e1a5d"
 
       def install
         bin.install "signpost"
@@ -27,24 +27,18 @@ class Signpost < Formula
   end
 
   on_linux do
-    on_intel do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sikalabs/signpost/releases/download/v0.6.0/signpost_v0.6.0_linux_amd64.tar.gz"
-        sha256 "fb6be98fa2a60c7a28be0b88f37c3d2ea950fe0e05bce887763014be83fdb5bf"
-
-        def install
-          bin.install "signpost"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/signpost/releases/download/v0.7.0/signpost_v0.7.0_linux_amd64.tar.gz"
+      sha256 "e4425c3eea37724e78775f49a2136355120ac04105cf17597f8269fa1de6af2c"
+      def install
+        bin.install "signpost"
       end
     end
-    on_arm do
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/sikalabs/signpost/releases/download/v0.6.0/signpost_v0.6.0_linux_arm64.tar.gz"
-        sha256 "ac209723cde0f9582de24803b90f35d5ef6871f2fa8e6460366d786af097d3df"
-
-        def install
-          bin.install "signpost"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/signpost/releases/download/v0.7.0/signpost_v0.7.0_linux_arm64.tar.gz"
+      sha256 "5458cb313b0654d2b86a27db29ecbe94d5701d66ba26f5ca35ea1f5798424350"
+      def install
+        bin.install "signpost"
       end
     end
   end
