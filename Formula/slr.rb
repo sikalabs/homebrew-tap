@@ -5,20 +5,20 @@
 class Slr < Formula
   desc "slr"
   homepage "https://github.com/sikalabs/slr"
-  version "0.22.0"
+  version "0.23.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slr/releases/download/v0.22.0/slr_v0.22.0_darwin_amd64.tar.gz"
-      sha256 "72b0446b796e0bef6024efb23b8892b504eb2895283bace661de2209d45e6162"
+      url "https://github.com/sikalabs/slr/releases/download/v0.23.0/slr_v0.23.0_darwin_amd64.tar.gz"
+      sha256 "1da1a290e59c217e938fe15ecfccee849de147b74c1c571fe9dbe896ae7fca45"
 
       def install
         bin.install "slr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slr/releases/download/v0.22.0/slr_v0.22.0_darwin_arm64.tar.gz"
-      sha256 "67ef7bd2a29c8fc4443bdf0417831b2f476c892243de1bdbe5f68f8576d8d58a"
+      url "https://github.com/sikalabs/slr/releases/download/v0.23.0/slr_v0.23.0_darwin_arm64.tar.gz"
+      sha256 "31ccd81edfa17f9abafc163b05fbf70987a8917bd6869f345972254cfdbd8550"
 
       def install
         bin.install "slr"
@@ -27,16 +27,16 @@ class Slr < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slr/releases/download/v0.22.0/slr_v0.22.0_linux_amd64.tar.gz"
-      sha256 "a1c91ef69d55713408dd5554161621cd8e6b35653fb8319bf54b1a5346a78df7"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/slr/releases/download/v0.23.0/slr_v0.23.0_linux_amd64.tar.gz"
+      sha256 "77e63665d5c60f59d37c04eff308e2efe7f1e6a67424bb525ade1e25c9aeae30"
       def install
         bin.install "slr"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slr/releases/download/v0.22.0/slr_v0.22.0_linux_arm64.tar.gz"
-      sha256 "8fc71f8649f41e82dd3dc31d7940ca6b43b70b6e5df88380e34d869ef9da715e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/slr/releases/download/v0.23.0/slr_v0.23.0_linux_arm64.tar.gz"
+      sha256 "d6e3d8ea70a57bf1001d22b4c97238352d203e3a3841404b12d5e0373002cd7a"
       def install
         bin.install "slr"
       end
