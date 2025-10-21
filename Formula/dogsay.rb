@@ -5,20 +5,20 @@
 class Dogsay < Formula
   desc "dogsay"
   homepage "https://github.com/sikalabs/dogsay"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/dogsay/releases/download/v0.1.0/dogsay_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "a004dfb9a9e483d471d5e8434c41001546e3a3e8d73dfd4cbcb15dffe3cb6f6f"
+      url "https://github.com/sikalabs/dogsay/releases/download/v0.2.0/dogsay_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "535167782d8de1445d2520fac85373af8eaccaf176fb522f5009919cf9d15c77"
 
       def install
         bin.install "dogsay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/dogsay/releases/download/v0.1.0/dogsay_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "979694f369e3c7092981bcd0c2b7384878f4ec8c7bf672249813b28f64e35b52"
+      url "https://github.com/sikalabs/dogsay/releases/download/v0.2.0/dogsay_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "bc127a58243b1062784ae62ba7c87e121c5382a070952a9104a250b7c614119e"
 
       def install
         bin.install "dogsay"
@@ -27,16 +27,16 @@ class Dogsay < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/dogsay/releases/download/v0.1.0/dogsay_v0.1.0_linux_amd64.tar.gz"
-      sha256 "d9ffd5b4bf36e07e859ddd04c6e70db19a2a5344cda13216a54d2012bfcdfde3"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/dogsay/releases/download/v0.2.0/dogsay_v0.2.0_linux_amd64.tar.gz"
+      sha256 "194e1b4261bf6f3b142d77e0503a8b102ffbbbb73764fd94dc6b9cf5bc55d5a9"
       def install
         bin.install "dogsay"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/dogsay/releases/download/v0.1.0/dogsay_v0.1.0_linux_arm64.tar.gz"
-      sha256 "d1c2de8c12d2c745dffb71d21a9db539368b997c86f60231be6f250bed61bdf0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sikalabs/dogsay/releases/download/v0.2.0/dogsay_v0.2.0_linux_arm64.tar.gz"
+      sha256 "10a044224a5f5cb8180507e1f6ddb1fa7ea2558fc53af292275a9d8337668b5e"
       def install
         bin.install "dogsay"
       end
