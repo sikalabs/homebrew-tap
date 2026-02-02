@@ -5,20 +5,20 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.96.0"
+  version "0.97.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.96.0/slu_v0.96.0_darwin_amd64.tar.gz"
-      sha256 "2c0b608d6d469eeb6ed1f1e527ad1084da818556edf310e532f7179471e7f075"
+      url "https://github.com/sikalabs/slu/releases/download/v0.97.0/slu_v0.97.0_darwin_amd64.tar.gz"
+      sha256 "4f1c76be9ca1dedbf289f15828fd5e65c8f0e4f96d8208a0454eb9c8802c146b"
 
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.96.0/slu_v0.96.0_darwin_arm64.tar.gz"
-      sha256 "70e14f29b3abbb536ee20f9e21f8113e196adc1f19a9bd3dfb381c592124ef76"
+      url "https://github.com/sikalabs/slu/releases/download/v0.97.0/slu_v0.97.0_darwin_arm64.tar.gz"
+      sha256 "5a12e0c42fc36ef2bf8058a3b039402a758509d745f37c90191adb2e50502f7a"
 
       def install
         bin.install "slu"
@@ -28,15 +28,15 @@ class Slu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.96.0/slu_v0.96.0_linux_amd64.tar.gz"
-      sha256 "ec01b99284ea5c74dd658bf683419047289b4893f00210912227b1e994fde99b"
+      url "https://github.com/sikalabs/slu/releases/download/v0.97.0/slu_v0.97.0_linux_amd64.tar.gz"
+      sha256 "d646b12cebc76f6b4c07751fda5788445eadf880c25938cdc0fa42ad3d65c05b"
       def install
         bin.install "slu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.96.0/slu_v0.96.0_linux_arm64.tar.gz"
-      sha256 "6c4ddaa4bb0846d8f8b13f9043ad53a4dfdcda14ce43980780915b1788993a0f"
+      url "https://github.com/sikalabs/slu/releases/download/v0.97.0/slu_v0.97.0_linux_arm64.tar.gz"
+      sha256 "406e74bf2f0710cc05a652fb89699a2556110339e2295879b672d6710f0591bc"
       def install
         bin.install "slu"
       end
