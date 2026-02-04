@@ -5,20 +5,20 @@
 class WebhookDispatcher < Formula
   desc "webhook-dispatcher"
   homepage "https://github.com/sikalabs/webhook-dispatcher"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/webhook-dispatcher/releases/download/v0.2.0/webhook-dispatcher_v0.2.0_darwin_amd64.tar.gz"
-      sha256 "2587d95d60d9b90b20f295cdb9fee7d9ea8f8917172ec19bc713ae0a6b15d6bd"
+      url "https://github.com/sikalabs/webhook-dispatcher/releases/download/v0.3.0/webhook-dispatcher_v0.3.0_darwin_amd64.tar.gz"
+      sha256 "3dc7dfa8e3a01818f73b924fe939ae6c2726d8f6d098187a941d07b5c6fe2717"
 
       def install
         bin.install "webhook-dispatcher"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/webhook-dispatcher/releases/download/v0.2.0/webhook-dispatcher_v0.2.0_darwin_arm64.tar.gz"
-      sha256 "2117269316935279b79edb95dff6418662a11eac7eed25a7f4566217057d72b3"
+      url "https://github.com/sikalabs/webhook-dispatcher/releases/download/v0.3.0/webhook-dispatcher_v0.3.0_darwin_arm64.tar.gz"
+      sha256 "fcbfaa51fbed3b6cde94d66af344f419ae283666fea2807263c7f158396b3a66"
 
       def install
         bin.install "webhook-dispatcher"
@@ -28,15 +28,15 @@ class WebhookDispatcher < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/webhook-dispatcher/releases/download/v0.2.0/webhook-dispatcher_v0.2.0_linux_amd64.tar.gz"
-      sha256 "1e7220197edbcc79684f02757a43c1f8020dc4b0e99136eaa623b0c984a0c584"
+      url "https://github.com/sikalabs/webhook-dispatcher/releases/download/v0.3.0/webhook-dispatcher_v0.3.0_linux_amd64.tar.gz"
+      sha256 "920cb09064f1036c663baff3ebe15a66fcd1a2c92d38e4c678457855c4e98c2e"
       def install
         bin.install "webhook-dispatcher"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/webhook-dispatcher/releases/download/v0.2.0/webhook-dispatcher_v0.2.0_linux_arm64.tar.gz"
-      sha256 "788919f5f73ac1dd950ea115ec3687c60f0a1b5703e69eb7d64d3018a1fc0514"
+      url "https://github.com/sikalabs/webhook-dispatcher/releases/download/v0.3.0/webhook-dispatcher_v0.3.0_linux_arm64.tar.gz"
+      sha256 "037aae7c3b2e21aa2ee1d05648a073cb832154e439dd95f804a7ee79f002d8fc"
       def install
         bin.install "webhook-dispatcher"
       end
