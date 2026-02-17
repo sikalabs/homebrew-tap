@@ -5,20 +5,20 @@
 class Mon < Formula
   desc "mon"
   homepage "https://github.com/sikalabs/mon"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/mon/releases/download/v0.1.0/mon_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "d5818b17f7b2a1f8a2e47b581f6d32adbf21f5a93144af727e56b3908b869b70"
+      url "https://github.com/sikalabs/mon/releases/download/v0.2.0/mon_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "18324676af6764b0fcafa43570bde9bd177185b5db1424f976d6a62164281f42"
 
       def install
         bin.install "mon"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/mon/releases/download/v0.1.0/mon_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "e49b6469be30c78e1b9c1f0ab238737d04e0002735b38e7882d6c32007f9339d"
+      url "https://github.com/sikalabs/mon/releases/download/v0.2.0/mon_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "741b6c6ccac20c1fc492add5f948aafaaa918f5a5245286c7a405fe271124786"
 
       def install
         bin.install "mon"
@@ -28,15 +28,15 @@ class Mon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/mon/releases/download/v0.1.0/mon_v0.1.0_linux_amd64.tar.gz"
-      sha256 "2904b7898a2ac107816baa0e20094d1dcb960f57e9e36e696e0812ef8dd2e7e5"
+      url "https://github.com/sikalabs/mon/releases/download/v0.2.0/mon_v0.2.0_linux_amd64.tar.gz"
+      sha256 "dddee517b99ede1e5434995490a3b13ca69e0d4b46a51e3e374517857e084a06"
       def install
         bin.install "mon"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/mon/releases/download/v0.1.0/mon_v0.1.0_linux_arm64.tar.gz"
-      sha256 "ac743ea77b9dc1e7f6d53ed5664d40d740dd9deee5e23dc819e19bed9fc27e33"
+      url "https://github.com/sikalabs/mon/releases/download/v0.2.0/mon_v0.2.0_linux_arm64.tar.gz"
+      sha256 "04b634cbf2f3bd7bc21e14d3d172404e6cf4af511b57051cf9ebed5ea56f7a75"
       def install
         bin.install "mon"
       end
