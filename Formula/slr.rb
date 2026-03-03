@@ -5,22 +5,22 @@
 class Slr < Formula
   desc "slr"
   homepage "https://github.com/sikalabs/slr"
-  version "0.36.0"
+  version "0.37.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slr/releases/download/v0.36.0/slr_v0.36.0_darwin_amd64.tar.gz"
-      sha256 "ccad5927a74eec000954cef612ca75db3816e45f80bc90784e77a0c5ffb24826"
+      url "https://github.com/sikalabs/slr/releases/download/v0.37.0/slr_v0.37.0_darwin_amd64.tar.gz"
+      sha256 "4781971090e8948f3b924bd7aab4a4af5922e23a8d383ceb7038ff58bb85b359"
 
-      def install
+      define_method(:install) do
         bin.install "slr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slr/releases/download/v0.36.0/slr_v0.36.0_darwin_arm64.tar.gz"
-      sha256 "3464a65cd4e5e89c99e381ccbca2105a5ecbf050ffb8265069ca268b50d5a55a"
+      url "https://github.com/sikalabs/slr/releases/download/v0.37.0/slr_v0.37.0_darwin_arm64.tar.gz"
+      sha256 "f893f4fb0fbd0c777064d22063f5d9ea816dc55c2bf0d51e17673df89d2038e8"
 
-      def install
+      define_method(:install) do
         bin.install "slr"
       end
     end
@@ -28,16 +28,16 @@ class Slr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slr/releases/download/v0.36.0/slr_v0.36.0_linux_amd64.tar.gz"
-      sha256 "b74f2c4cf3c8065ba48e7c5df9b28def78c5d1bad845f37923273fdf6a028740"
-      def install
+      url "https://github.com/sikalabs/slr/releases/download/v0.37.0/slr_v0.37.0_linux_amd64.tar.gz"
+      sha256 "908b21f052a119137754cb9ec6e5932c7318ee3c1e714342f8cfc7c9d3fc0eea"
+      define_method(:install) do
         bin.install "slr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slr/releases/download/v0.36.0/slr_v0.36.0_linux_arm64.tar.gz"
-      sha256 "418368500f86bd0732c80ae36783cd8ae719ceb7c1680a114eecdd2fce122d74"
-      def install
+      url "https://github.com/sikalabs/slr/releases/download/v0.37.0/slr_v0.37.0_linux_arm64.tar.gz"
+      sha256 "a405e0d8ba1196404661944dfc10f8be63dd1e708637fcf9aa82b69725832a5a"
+      define_method(:install) do
         bin.install "slr"
       end
     end
