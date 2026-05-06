@@ -5,22 +5,22 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.99.0"
+  version "0.100.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.99.0/slu_v0.99.0_darwin_amd64.tar.gz"
-      sha256 "70d9c6b69767d71d32b4d3b72a925ccd8a86e0490016f8a99f46e31eabf2ad4e"
+      url "https://github.com/sikalabs/slu/releases/download/v0.100.0/slu_v0.100.0_darwin_amd64.tar.gz"
+      sha256 "26103fb1b78c871259f374f09a4eed8b7893a6178d76d1c9313ea6db75fd784f"
 
-      def install
+      define_method(:install) do
         bin.install "slu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.99.0/slu_v0.99.0_darwin_arm64.tar.gz"
-      sha256 "29845c8a17fd2510d46d4b49a8e9ba90570b845c258619a26162f401297cb2fa"
+      url "https://github.com/sikalabs/slu/releases/download/v0.100.0/slu_v0.100.0_darwin_arm64.tar.gz"
+      sha256 "a2f18b4379c773c168c5959ca3902e88a59b8d2ae4ae30a56fa06447d9c35d28"
 
-      def install
+      define_method(:install) do
         bin.install "slu"
       end
     end
@@ -28,16 +28,16 @@ class Slu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.99.0/slu_v0.99.0_linux_amd64.tar.gz"
-      sha256 "7333b287f9a2dc8352824340ea5cf969073ae3bcd71050432594658518f1bb6f"
-      def install
+      url "https://github.com/sikalabs/slu/releases/download/v0.100.0/slu_v0.100.0_linux_amd64.tar.gz"
+      sha256 "2e0dac908cbf2ca252e0bca06a41cf9b6fb376884924c740dbf6f7cdcafb8664"
+      define_method(:install) do
         bin.install "slu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.99.0/slu_v0.99.0_linux_arm64.tar.gz"
-      sha256 "44eb94d578ca797fc769b5870d304151fc3e742e9883fc73d4af9941eebd253c"
-      def install
+      url "https://github.com/sikalabs/slu/releases/download/v0.100.0/slu_v0.100.0_linux_arm64.tar.gz"
+      sha256 "523f0fe380f83c4910b328fde11a57bdbfaa299a7e7677e09768d02729ca759a"
+      define_method(:install) do
         bin.install "slu"
       end
     end
