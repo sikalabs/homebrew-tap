@@ -5,20 +5,20 @@
 class Tergum < Formula
   desc "Tergum Backup Tool"
   homepage "https://github.com/sikalabs/tergum"
-  version "0.44.0"
+  version "0.45.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.44.0/tergum_v0.44.0_darwin_amd64.tar.gz"
-      sha256 "30483c428a309d7b13075bcacc46bfdb6a369910c3b3e7f7585fa9ca0a80b2de"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.45.0/tergum_v0.45.0_darwin_amd64.tar.gz"
+      sha256 "85f003f723ad8b53ca0d663ad8150e4bff525d23c2d14ba5f51f953f3fdd7c49"
 
       define_method(:install) do
         bin.install "tergum"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.44.0/tergum_v0.44.0_darwin_arm64.tar.gz"
-      sha256 "b3ba7e3d6ad2096fe14a1d0d213ce5f4102dc04a417c59e59944f531d3a78441"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.45.0/tergum_v0.45.0_darwin_arm64.tar.gz"
+      sha256 "9969a7e571d56cd5ff4df94fe7c001cbfa7ffde67cfc8a0201a64a1601df4ad4"
 
       define_method(:install) do
         bin.install "tergum"
@@ -28,15 +28,15 @@ class Tergum < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.44.0/tergum_v0.44.0_linux_amd64.tar.gz"
-      sha256 "6e6ce236dc4a1877154d8c75a32b35e53a3edcceb95024c1fa49197077a37bcf"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.45.0/tergum_v0.45.0_linux_amd64.tar.gz"
+      sha256 "8f7e704f51955198627e01b0c9e59bd12e39aeec1b8bfac70e8c672d84f0893d"
       define_method(:install) do
         bin.install "tergum"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/tergum/releases/download/v0.44.0/tergum_v0.44.0_linux_arm64.tar.gz"
-      sha256 "fdca401a71c8d7071b69e39f546df5126cd184a02e6ff947517c45004a7d8ee4"
+      url "https://github.com/sikalabs/tergum/releases/download/v0.45.0/tergum_v0.45.0_linux_arm64.tar.gz"
+      sha256 "176471173d1ea301b82908b9d7c4c9924f3a3dabe5841cb8f693000e112d0755"
       define_method(:install) do
         bin.install "tergum"
       end
