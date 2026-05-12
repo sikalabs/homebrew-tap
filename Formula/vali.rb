@@ -5,20 +5,20 @@
 class Vali < Formula
   desc "vali"
   homepage "https://github.com/sikalabs/vali"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/vali/releases/download/v0.1.0/vali_v0.1.0_darwin_amd64.tar.gz"
-      sha256 "041303ab8da91628230b1bcd6b3a5a37e9cbbe494c24aebb2b2a5c2ba7372446"
+      url "https://github.com/sikalabs/vali/releases/download/v0.2.0/vali_v0.2.0_darwin_amd64.tar.gz"
+      sha256 "ef78276ceb5207fbd599c1558267b035cd6623ac920dcde3c9a7886ba592ef09"
 
       define_method(:install) do
         bin.install "vali"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/vali/releases/download/v0.1.0/vali_v0.1.0_darwin_arm64.tar.gz"
-      sha256 "6b1c7f65c7886fc5d92d878642341d52b768987c6dcad28cd72485889a7cbc0a"
+      url "https://github.com/sikalabs/vali/releases/download/v0.2.0/vali_v0.2.0_darwin_arm64.tar.gz"
+      sha256 "803ab2b6dc645cd656e8d64a516df564769e3ea9355f762f11878ac9b232a1d0"
 
       define_method(:install) do
         bin.install "vali"
@@ -28,15 +28,15 @@ class Vali < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/vali/releases/download/v0.1.0/vali_v0.1.0_linux_amd64.tar.gz"
-      sha256 "d234d5330a5d282d64f89e9aeec9b963a3fa58a089f836a4f2fb3b6d94475fcc"
+      url "https://github.com/sikalabs/vali/releases/download/v0.2.0/vali_v0.2.0_linux_amd64.tar.gz"
+      sha256 "3963b4990228d0c6c4db6bdc177f22a6765f7436cd33c2e6bd6d81ac43c22720"
       define_method(:install) do
         bin.install "vali"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/vali/releases/download/v0.1.0/vali_v0.1.0_linux_arm64.tar.gz"
-      sha256 "1315c4e1b36102db4c2cc91f5b40bb98ec6d7e349cd2d1bf2ce094f41e6f9cfc"
+      url "https://github.com/sikalabs/vali/releases/download/v0.2.0/vali_v0.2.0_linux_arm64.tar.gz"
+      sha256 "76c62f3ddfa457cbe386805a1e4cb5f30d87245773631170ba8141b8adcf0998"
       define_method(:install) do
         bin.install "vali"
       end
