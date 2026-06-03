@@ -5,20 +5,20 @@
 class Slu < Formula
   desc "SikaLabs Utils"
   homepage "https://github.com/sikalabs/slu"
-  version "0.100.0"
+  version "0.101.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slu/releases/download/v0.100.0/slu_v0.100.0_darwin_amd64.tar.gz"
-      sha256 "26103fb1b78c871259f374f09a4eed8b7893a6178d76d1c9313ea6db75fd784f"
+      url "https://github.com/sikalabs/slu/releases/download/v0.101.0/slu_v0.101.0_darwin_amd64.tar.gz"
+      sha256 "76c1bca952de3bf233dcc6710ec16d24d231b7a315cc6fb195966d8b8fd7a25f"
 
       define_method(:install) do
         bin.install "slu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slu/releases/download/v0.100.0/slu_v0.100.0_darwin_arm64.tar.gz"
-      sha256 "a2f18b4379c773c168c5959ca3902e88a59b8d2ae4ae30a56fa06447d9c35d28"
+      url "https://github.com/sikalabs/slu/releases/download/v0.101.0/slu_v0.101.0_darwin_arm64.tar.gz"
+      sha256 "90c77a003447c490159cd12149041f7d6d0bc75f21738028bc55700060389164"
 
       define_method(:install) do
         bin.install "slu"
@@ -28,15 +28,15 @@ class Slu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.100.0/slu_v0.100.0_linux_amd64.tar.gz"
-      sha256 "2e0dac908cbf2ca252e0bca06a41cf9b6fb376884924c740dbf6f7cdcafb8664"
+      url "https://github.com/sikalabs/slu/releases/download/v0.101.0/slu_v0.101.0_linux_amd64.tar.gz"
+      sha256 "b062a5d1029536da8710f7c089b348755609159596a0fa07cbd16b71c3d7d744"
       define_method(:install) do
         bin.install "slu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slu/releases/download/v0.100.0/slu_v0.100.0_linux_arm64.tar.gz"
-      sha256 "523f0fe380f83c4910b328fde11a57bdbfaa299a7e7677e09768d02729ca759a"
+      url "https://github.com/sikalabs/slu/releases/download/v0.101.0/slu_v0.101.0_linux_arm64.tar.gz"
+      sha256 "f77c033bab22ade317b1cbcbaf849c2f329b9b2f579eff15b896e964c63768f7"
       define_method(:install) do
         bin.install "slu"
       end
