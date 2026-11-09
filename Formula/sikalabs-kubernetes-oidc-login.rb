@@ -5,20 +5,20 @@
 class SikalabsKubernetesOidcLogin < Formula
   desc "sikalabs-kubernetes-oidc-login is a simple command-line tool that performs OIDC login and outputs Kubernetes ExecCredential for kubectl. It allows users to authenticate with an OIDC provider and obtain the necessary credentials to access Kubernetes clusters."
   homepage "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login/releases/download/v0.2.0/sikalabs-kubernetes-oidc-login_v0.2.0_darwin_amd64.tar.gz"
-      sha256 "b86bbfaa7fc26fc6c35d47e103062ee783707f91e240c59953426d90b1900365"
+      url "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login/releases/download/v0.3.0/sikalabs-kubernetes-oidc-login_v0.3.0_darwin_amd64.tar.gz"
+      sha256 "5917900a4c4c2b4c8284238c56f815fc6a46f945525217e9996cd3665e75530a"
 
       define_method(:install) do
         bin.install "sikalabs-kubernetes-oidc-login"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login/releases/download/v0.2.0/sikalabs-kubernetes-oidc-login_v0.2.0_darwin_arm64.tar.gz"
-      sha256 "396dc579c4d8456fecbff8a257bde799bf2c86224294c610043e75c7c96506d1"
+      url "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login/releases/download/v0.3.0/sikalabs-kubernetes-oidc-login_v0.3.0_darwin_arm64.tar.gz"
+      sha256 "458e775c3ecddf67b3d8bb7f4f5c358a9e0828bde6e1fd15cffcd237bd563dae"
 
       define_method(:install) do
         bin.install "sikalabs-kubernetes-oidc-login"
@@ -28,15 +28,15 @@ class SikalabsKubernetesOidcLogin < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login/releases/download/v0.2.0/sikalabs-kubernetes-oidc-login_v0.2.0_linux_amd64.tar.gz"
-      sha256 "010f0b81ba98a13cd019b42976341a99e3068bf6570f33a33e430067613756e5"
+      url "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login/releases/download/v0.3.0/sikalabs-kubernetes-oidc-login_v0.3.0_linux_amd64.tar.gz"
+      sha256 "335d685aeeac26a227cb6860f4ad29f8902e39e6d8c9402f8d6e2e719b86ce08"
       define_method(:install) do
         bin.install "sikalabs-kubernetes-oidc-login"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login/releases/download/v0.2.0/sikalabs-kubernetes-oidc-login_v0.2.0_linux_arm64.tar.gz"
-      sha256 "7eee9582672ff794dff69584e3bf6f48167f51155e3f28def0d5316032a03713"
+      url "https://github.com/sikalabs/sikalabs-kubernetes-oidc-login/releases/download/v0.3.0/sikalabs-kubernetes-oidc-login_v0.3.0_linux_arm64.tar.gz"
+      sha256 "1a31dc1e17c168c1e58ff273a127493fb8a6cd915095da4815686f57e4234ffb"
       define_method(:install) do
         bin.install "sikalabs-kubernetes-oidc-login"
       end
