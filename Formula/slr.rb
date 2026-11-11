@@ -5,20 +5,20 @@
 class Slr < Formula
   desc "slr"
   homepage "https://github.com/sikalabs/slr"
-  version "0.51.0"
+  version "0.52.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sikalabs/slr/releases/download/v0.51.0/slr_v0.51.0_darwin_amd64.tar.gz"
-      sha256 "4dc09700fb5a41dc79448c86e1ad094f7a8583d385e637bd143d3fc899bfbcbe"
+      url "https://github.com/sikalabs/slr/releases/download/v0.52.0/slr_v0.52.0_darwin_amd64.tar.gz"
+      sha256 "94481f6a9f7080c2ba100375b5a70e06b789ef0684b501ff9c1ad6ecffcf9289"
 
       define_method(:install) do
         bin.install "slr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sikalabs/slr/releases/download/v0.51.0/slr_v0.51.0_darwin_arm64.tar.gz"
-      sha256 "a7a82c5778ce2545e5fba253fc488140c41d7bf61021b5679e07c78fcd2a0067"
+      url "https://github.com/sikalabs/slr/releases/download/v0.52.0/slr_v0.52.0_darwin_arm64.tar.gz"
+      sha256 "abf8eac56299ce1a12a6c8943e41d54bf1fee0f6b14d0f9e20be2623764de568"
 
       define_method(:install) do
         bin.install "slr"
@@ -28,15 +28,15 @@ class Slr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slr/releases/download/v0.51.0/slr_v0.51.0_linux_amd64.tar.gz"
-      sha256 "a6bd465967f57362cfc56976c61f0cfcba22038ecb58b2e52f4496ae0b65049a"
+      url "https://github.com/sikalabs/slr/releases/download/v0.52.0/slr_v0.52.0_linux_amd64.tar.gz"
+      sha256 "cbc953608c636ec4b5cad81c197c3a73e282e91986440bff3d58a3ee93bb14d2"
       define_method(:install) do
         bin.install "slr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sikalabs/slr/releases/download/v0.51.0/slr_v0.51.0_linux_arm64.tar.gz"
-      sha256 "1c67cbd349907ba41fb6bbef5481a630bd0374d509b08a3871e5b9c66f43acb8"
+      url "https://github.com/sikalabs/slr/releases/download/v0.52.0/slr_v0.52.0_linux_arm64.tar.gz"
+      sha256 "a7f38044af20102adebc703673953c68fc07dfc750f4e45798b0a12cd0389357"
       define_method(:install) do
         bin.install "slr"
       end
